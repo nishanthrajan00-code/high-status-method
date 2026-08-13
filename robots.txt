@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /dashboard-login.html
+Disallow: /.netlify/
+
+Sitemap: https://highstatusmethod.com/sitemap.xml
