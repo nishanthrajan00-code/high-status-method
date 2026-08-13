@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard — High Status Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#ffffff; --ink-muted:#9a9a9a; --ink-faint:#666666;
+  --canvas:#050505; --canvas-deep:#000000;
+  --surface-1:#131313; --surface-2:#1b1b1b;
+  --hairline:#242424; --hairline-soft:#191919;
+  --accent-blue-soft:#4d8bff;
+  --success:#22c55e; --danger:#ff5a5a;
+  --r-md:10px; --r-lg:15px; --r-pill:100px;
+  --sp-xs:8px; --sp-sm:12px; --sp-md:15px; --sp-lg:20px; --sp-xl:30px; --sp-xxl:40px; --sp-section:60px;
+  --font-body:'Inter', -apple-system, system-ui, sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{scroll-behavior:smooth; margin:0; background:#000;}
+body{ margin:0; background:#000; color:var(--ink); font-family:var(--font-body); font-size:15px; line-height:1.4; letter-spacing:-0.1px; -webkit-font-smoothing:antialiased; }
+a{ color:inherit; text-decoration:none; }
+.wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
+.top-nav{ position:sticky; top:0; z-index:200; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); height:60px; border-bottom:1px solid var(--hairline-soft); }
+.top-nav .inner{ max-width:1080px; margin:0 auto; padding:0 24px; display:flex; align-items:center; justify-content:space-between; height:60px; }
+.brand{ display:flex; align-items:center; gap:9px; }
+.brand .mark{ width:24px; height:24px; }
+.brand .mark img{ width:100%; height:100%; object-fit:contain; }
+.brand .word{ font-size:14px; font-weight:600; letter-spacing:-0.1px; }
+.top-nav .meta{ font-size:12.5px; color:var(--ink-faint); display:flex; align-items:center; gap:10px; }
+.refresh-btn{ background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--r-pill); padding:7px 14px; font-size:12.5px; font-weight:600; color:var(--ink); cursor:pointer; }
+.refresh-btn:hover{ background:var(--surface-2); }
+main{ padding:var(--sp-xl) 0 100px; }
+h1{ font-size:24px; font-weight:600; letter-spacing:-0.5px; margin-bottom:4px; }
+.sub{ color:var(--ink-faint); font-size:13px; margin-bottom:var(--sp-xl); }
+.grid-kpi{ display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin-bottom:var(--sp-xl); }
+.card{ background:var(--surface-1); border-radius:var(--r-md); padding:16px; }
+.card .label{ font-size:12.5px; color:var(--ink-muted); margin-bottom:8px; display:flex; align-items:center; gap:6px; }
+.card .value{ font-size:24px; font-weight:600; letter-spacing:-0.4px; }
+.card .value.small{ font-size:15px; color:var(--ink-faint); font-weight:500; }
+.section{ margin-bottom:var(--sp-xl); }
+.section-title{ font-size:13px; font-weight:600; color:var(--ink-muted); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.3px; }
+.two-col{ display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+@media(max-width:720px){ .two-col{ grid-template-columns:1fr; } }
+.bar-row{ margin-bottom:12px; }
+.bar-row .bar-label{ display:flex; justify-content:space-between; font-size:13px; margin-bottom:4px; }
+.bar-row .bar-label .v{ color:var(--ink-muted); }
+.bar-track{ height:6px; background:var(--hairline); border-radius:4px; overflow:hidden; }
+.bar-fill{ height:100%; background:var(--accent-blue-soft); border-radius:4px; }
+.purchase-row{ display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--hairline-soft); font-size:13px; }
+.purchase-row:last-child{ border-bottom:none; }
+.purchase-row .amt{ color:var(--ink-muted); }
+.purchase-row .when{ color:var(--ink-faint); font-size:12px; margin-left:auto; }
+.chart-wrap{ position:relative; height:180px; margin-bottom:var(--sp-xl); }
+.error-note{ font-size:12.5px; color:var(--ink-faint); background:var(--surface-1); border-radius:var(--r-md); padding:12px 14px; }
+.links-row{ display:flex; gap:10px; flex-wrap:wrap; }
+.links-row a{ background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--r-pill); padding:9px 16px; font-size:13px; font-weight:600; }
+.links-row a:hover{ background:var(--surface-2); }
+.loading{ color:var(--ink-faint); font-size:13px; padding:40px 0; text-align:center; }
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="inner">
+    <a href="/" class="brand"><span class="mark"><img src="hsm-logo-new.png" alt="High Status Method"></span><span class="word">High Status Method</span></a>
+    <div class="meta">
+      <span id="lastUpdated">—</span>
+      <button class="refresh-btn" id="refreshBtn">Refresh</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <h1>Overview</h1>
+    <div class="sub" id="subLine">Loading current numbers…</div>
+
+    <div id="loadingState" class="loading">Pulling live numbers from GA4 and Whop…</div>
+
+    <div id="dashboardBody" style="display:none;">
+
+      <div class="grid-kpi">
+        <div class="card">
+          <div class="label">Visitors (30d)</div>
+          <div class="value" id="kpiVisitors">—</div>
+        </div>
+        <div class="card">
+          <div class="label">Conversion rate</div>
+          <div class="value" id="kpiConvRate">—</div>
+        </div>
+        <div class="card">
+          <div class="label">Purchases (30d)</div>
+          <div class="value" id="kpiPurchases">—</div>
+        </div>
+        <div class="card">
+          <div class="label">Revenue (30d)</div>
+          <div class="value" id="kpiRevenue">—</div>
+        </div>
+        <div class="card">
+          <div class="label">New payments (30d)</div>
+          <div class="value" id="kpiNewPayments">—</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Traffic — last 30 days</div>
+        <div class="chart-wrap"><canvas id="trafficChart"></canvas></div>
+      </div>
+
+      <div class="two-col section">
+        <div>
+          <div class="section-title">Top CTAs clicked</div>
+          <div id="ctaList"></div>
+        </div>
+        <div>
+          <div class="section-title">Top traffic sources</div>
+          <div id="sourceList"></div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-title">Recent purchases</div>
+        <div id="purchaseList"></div>
+      </div>
+
+      <div class="links-row">
+        <a href="https://clarity.microsoft.com" target="_blank" rel="noopener">Open Clarity — recordings</a>
+        <a href="https://analytics.google.com" target="_blank" rel="noopener">Open GA4 — full report</a>
+        <a href="https://whop.com/dashboard" target="_blank" rel="noopener">Open Whop — payouts</a>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+(function(){
+  var loadingEl = document.getElementById('loadingState');
+  var bodyEl = document.getElementById('dashboardBody');
+  var subLine = document.getElementById('subLine');
+  var lastUpdated = document.getElementById('lastUpdated');
+  var chartInstance = null;
+
+  function money(cents, currency){
+    if (cents === null || cents === undefined) return '—';
+    var v = cents > 1000 ? cents / 100 : cents; // Whop amounts are sometimes already in dollars depending on endpoint
+    return new Intl.NumberFormat('en-US', { style:'currency', currency: currency || 'USD' }).format(v);
+  }
+
+  function renderBars(container, items, labelKey, valueKey){
+    container.innerHTML = '';
+    if (!items || !items.length){
+      container.innerHTML = '<div class="error-note">No data yet.</div>';
+      return;
+    }
+    var max = Math.max.apply(null, items.map(function(i){ return i[valueKey]; }));
+    items.forEach(function(item){
+      var row = document.createElement('div');
+      row.className = 'bar-row';
+      var pct = max ? Math.round((item[valueKey] / max) * 100) : 0;
+      row.innerHTML =
+        '<div class="bar-label"><span>' + item[labelKey] + '</span><span class="v">' + item[valueKey] + '</span></div>' +
+        '<div class="bar-track"><div class="bar-fill" style="width:' + pct + '%"></div></div>';
+      container.appendChild(row);
+    });
+  }
+
+  function load(){
+    loadingEl.style.display = 'block';
+    bodyEl.style.display = 'none';
+    subLine.textContent = 'Loading current numbers…';
+
+    fetch('/.netlify/functions/dashboard-data')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        loadingEl.style.display = 'none';
+        bodyEl.style.display = 'block';
+
+        var now = new Date(data.generatedAt);
+        lastUpdated.textContent = 'Updated ' + now.toLocaleTimeString();
+        subLine.textContent = 'Live numbers from GA4 and Whop.';
+
+        var ga4 = data.ga4 || {};
+        var whop = data.whop || {};
+
+        if (ga4.error){
+          document.getElementById('kpiVisitors').innerHTML = '<span class="value small">GA4 not connected</span>';
+          document.getElementById('kpiConvRate').innerHTML = '<span class="value small">—</span>';
+        } else {
+          document.getElementById('kpiVisitors').textContent = (ga4.activeUsers30d || 0).toLocaleString();
+          document.getElementById('kpiConvRate').textContent = (ga4.conversionRate || 0) + '%';
+        }
+        document.getElementById('kpiPurchases').textContent = ga4.error ? '—' : (ga4.conversions30d || 0).toLocaleString();
+
+        if (whop.error){
+          document.getElementById('kpiRevenue').innerHTML = '<span class="value small">Whop not connected</span>';
+          document.getElementById('kpiNewPayments').innerHTML = '<span class="value small">—</span>';
+        } else {
+          document.getElementById('kpiRevenue').textContent = money(whop.revenue30d, 'USD');
+          document.getElementById('kpiNewPayments').textContent = (whop.newPayments30d || 0).toLocaleString();
+        }
+
+        // Traffic chart
+        if (!ga4.error && ga4.trafficSeries && ga4.trafficSeries.length){
+          var ctx = document.getElementById('trafficChart');
+          if (chartInstance) chartInstance.destroy();
+          chartInstance = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ga4.trafficSeries.map(function(p){ return p.date; }),
+              datasets: [{
+                data: ga4.trafficSeries.map(function(p){ return p.users; }),
+                borderColor: '#4d8bff',
+                backgroundColor: 'rgba(77,139,255,0.1)',
+                fill: true, borderWidth: 2, pointRadius: 0, tension: 0.3
+              }]
+            },
+            options: {
+              responsive: true, maintainAspectRatio: false,
+              plugins: { legend: { display:false } },
+              scales: { x: { display:false }, y: { display:false } }
+            }
+          });
+        } else {
+          document.getElementById('trafficChart').parentElement.innerHTML = '<div class="error-note">' + (ga4.error || 'No traffic data yet.') + '</div>';
+        }
+
+        // CTAs
+        if (!ga4.error && ga4.topCtas && !ga4.topCtas.error){
+          renderBars(document.getElementById('ctaList'), ga4.topCtas, 'label', 'count');
+        } else {
+          document.getElementById('ctaList').innerHTML = '<div class="error-note">' + ((ga4.topCtas && ga4.topCtas.error) || 'Needs the cta_label custom dimension set up in GA4.') + '</div>';
+        }
+
+        // Sources
+        if (!ga4.error && ga4.topSources){
+          renderBars(document.getElementById('sourceList'), ga4.topSources, 'source', 'sessions');
+        } else {
+          document.getElementById('sourceList').innerHTML = '<div class="error-note">No source data yet.</div>';
+        }
+
+        // Purchases
+        var purchaseList = document.getElementById('purchaseList');
+        if (!whop.error && whop.recentPurchases && whop.recentPurchases.length){
+          purchaseList.innerHTML = '';
+          whop.recentPurchases.forEach(function(p){
+            var row = document.createElement('div');
+            row.className = 'purchase-row';
+            var when = p.createdAt ? new Date(p.createdAt).toLocaleDateString() : '';
+            row.innerHTML = '<span>' + p.id + '</span><span class="amt">' + money(p.amount, p.currency) + '</span><span class="when">' + when + '</span>';
+            purchaseList.appendChild(row);
+          });
+        } else {
+          purchaseList.innerHTML = '<div class="error-note">' + (whop.error || 'No purchases yet.') + '</div>';
+        }
+      })
+      .catch(function(err){
+        loadingEl.textContent = 'Could not load dashboard data: ' + err.message;
+      });
+  }
+
+  document.getElementById('refreshBtn').addEventListener('click', load);
+  load();
+})();
+</script>
+
+</body>
+</html>

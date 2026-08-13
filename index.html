@@ -1,0 +1,2551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RERZ71ZDVN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RERZ71ZDVN');
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y1qeyv7h2j");
+</script>
+<meta name="viewport" content="width=device-width">
+<title>High Status Method</title>
+<meta name="description" content="A personal-branding coaching system: camera technique, editing philosophy, and content strategy, reinforced by Nish AI and weekly human feedback.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!-- Whop embedded checkout loader: powers the on-site payment modal below (no redirect to whop.com for Join/Get full access clicks). Preconnecting here so the iframe negotiation is already warm by the time someone taps Join, instead of starting cold at click time. -->
+<link rel="preconnect" href="https://js.whop.com">
+<link rel="preconnect" href="https://whop.com" crossorigin>
+<script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+<style>
+  /* Licensed display font for the mobile hero headline and metric values.
+     Internal name table confirms this file's own family/subfamily are
+     "GT Walsheim Pro" / "Medium" (verified via fontTools), so the
+     font-family below is the font's real internal name, not an alias. */
+  @font-face{
+    font-family:'GT Walsheim Pro';
+    src:url('gt-walsheim-pro-medium.woff2') format('woff2'),
+        url('gt-walsheim-pro-medium.ttf') format('truetype');
+    font-weight:500;
+    font-style:normal;
+    font-display:swap;
+  }
+  :root{
+    color-scheme: dark;
+    --primary:#ffffff;
+    --on-primary:#000000;
+    --accent-blue:#0a63ff;
+    --accent-blue-soft:#4d8bff;
+    --ink:#ffffff;
+    --ink-muted:#9a9a9a;
+    --ink-faint:#666666;
+    --canvas:#050505;
+    --canvas-deep:#000000;
+    --surface-1:#131313;
+    --surface-2:#1b1b1b;
+    --surface-3:#0b0b0b;
+    --hairline:#242424;
+    --hairline-soft:#191919;
+    --neon-green:#39ff6a;
+    --success:#22c55e;
+
+    --r-xs:4px; --r-sm:6px; --r-md:10px; --r-lg:15px; --r-xl:20px; --r-xxl:28px; --r-hero:32px; --r-pill:100px; --r-full:9999px;
+
+    --sp-hair:1px; --sp-xxs:4px; --sp-xs:8px; --sp-sm:12px; --sp-md:15px; --sp-lg:20px; --sp-xl:30px; --sp-xxl:40px; --sp-section:112px;
+
+    --font-display:'Inter', -apple-system, system-ui, sans-serif;
+    --font-body:'Inter', -apple-system, system-ui, sans-serif;
+    --font-mono:'SF Mono', 'Menlo', 'Consolas', monospace;
+
+    /* Mobile hero redesign font system (see MOBILE HERO REDESIGN block below).
+       --font-mobile-display now uses the licensed GT Walsheim Pro Medium
+       file supplied by the user (gt-walsheim-pro-medium.woff2/.ttf,
+       @font-face declared above), with Inter as the fallback stack for
+       browsers where the file fails to load. Used at font-weight:500 on
+       the headline and metric values, matching the font's own Medium cut. */
+    --font-mobile-display:'GT Walsheim Pro', 'Inter', -apple-system, system-ui, sans-serif;
+    --font-mobile-body:'Inter', -apple-system, system-ui, sans-serif;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{
+    scroll-behavior:smooth; overflow-x:hidden; max-width:100%;
+    margin:0; background:#000;
+  }
+  body{
+    margin:0; background:#000; color:var(--ink);
+    font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;
+    font-size:15px; line-height:1.3; letter-spacing:-0.15px;
+    overflow-x:hidden; max-width:100%; width:100%;
+  }
+  a{ color:inherit; text-decoration:none; }
+  a.hyperlink{ color:var(--accent-blue-soft); }
+  a.hyperlink:hover{ text-decoration:underline; }
+  button{ font-family:inherit; cursor:pointer; border:none; background:none; }
+  ::selection{ background:var(--accent-blue); color:#fff; }
+
+  .t-display-xxl{ font-family:var(--font-display); font-size:96px; font-weight:600; line-height:0.98; letter-spacing:-3.6px; }
+  .t-display-xl{ font-family:var(--font-display); font-size:74px; font-weight:600; line-height:1.0; letter-spacing:-2.8px; }
+  .t-display-lg{ font-family:var(--font-display); font-size:56px; font-weight:600; line-height:1.05; letter-spacing:-2.1px; }
+  .t-display-md{ font-family:var(--font-display); font-size:34px; font-weight:600; line-height:1.15; letter-spacing:-1.0px; }
+  .t-headline{ font-size:22px; font-weight:700; line-height:1.25; letter-spacing:-0.6px; }
+  .t-subhead{ font-size:22px; font-weight:400; line-height:1.4; letter-spacing:-0.01px; }
+  .t-body-lg{ font-size:18px; font-weight:400; line-height:1.45; letter-spacing:-0.1px; }
+  .t-body{ font-size:15px; font-weight:400; line-height:1.5; letter-spacing:-0.1px; }
+  .t-body-sm{ font-size:14px; font-weight:500; line-height:1.4; letter-spacing:-0.1px; }
+  .t-caption{ font-size:13px; font-weight:600; line-height:1.2; letter-spacing:0.2px; text-transform:uppercase; }
+  .t-micro{ font-size:12px; font-weight:400; line-height:1.2; letter-spacing:-0.1px; }
+  .t-button{ font-size:14px; font-weight:600; line-height:1.0; letter-spacing:-0.1px; }
+
+  @media(max-width:1024px){ .t-display-xxl{ font-size:56px; line-height:1.05; letter-spacing:-2.1px; } }
+  @media(max-width:640px){ .t-display-xxl{ font-size:36px; line-height:1.1; letter-spacing:-1.2px; } .t-display-lg{ font-size:34px; letter-spacing:-1.2px; } .t-display-md{ font-size:26px; } }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 30px; }
+
+  /* ---------- buttons ---------- */
+  .btn{ display:inline-flex; align-items:center; justify-content:center; gap:6px; transition:transform .15s, background .15s; }
+  .btn:active{ transform:scale(0.96); }
+  .btn-primary{ background:var(--primary); color:var(--on-primary); border-radius:var(--r-pill); padding:13px 22px; }
+  .btn-primary:hover{ background:#e6e6e6; }
+  .btn-secondary{ background:var(--surface-2); color:var(--ink); border-radius:var(--r-pill); padding:13px 22px; border:1px solid var(--hairline); }
+  .btn-secondary:hover{ background:#242424; }
+  .btn-translucent{ background:var(--surface-2); color:var(--ink-muted); border-radius:var(--r-xxl); padding:8px 14px; }
+
+  /* ---------- top nav ---------- */
+  .top-nav{ position:sticky; top:0; z-index:200; background:rgba(0,0,0,0.7); backdrop-filter:blur(12px); height:60px; border-bottom:1px solid var(--hairline-soft); }
+  .top-nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:60px; }
+  .brand{ display:flex; align-items:center; gap:9px; }
+  .brand .mark{ width:24px; height:24px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .brand .mark img{ width:100%; height:100%; object-fit:contain; }
+  .brand .word{ font-size:14px; font-weight:600; letter-spacing:-0.1px; }
+  .top-nav nav{ display:none; gap:28px; }
+  .top-nav nav a{ font-size:14px; font-weight:500; letter-spacing:-0.1px; color:var(--ink-muted); }
+  .top-nav nav a:hover{ color:var(--ink); }
+  @media(min-width:860px){ .top-nav nav{ display:flex; } }
+  .top-nav .actions{ display:flex; align-items:center; gap:10px; }
+
+  /* ---------- hero ---------- */
+  .hero{ padding:44px 0 var(--sp-lg); text-align:center; position:relative; overflow:hidden; }
+  .hero h1{ max-width:820px; margin:0 auto 16px; }
+  .hero .sub{ color:var(--ink-muted); max-width:540px; margin:0 auto 18px; }
+
+  .hero-glow{ position:relative; max-width:640px; margin:0 auto 18px; }
+  .hero-glow::before{
+    content:''; position:absolute; inset:-90px; z-index:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 20%, rgba(10,99,255,0.55), rgba(10,99,255,0.12) 45%, transparent 68%);
+    filter:blur(30px);
+    animation:hsmGlowPulse 3.6s ease-in-out infinite;
+  }
+  @keyframes hsmGlowPulse{
+    0%, 100%{ opacity:0.75; }
+    50%{ opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-glow::before{ animation:none; }
+  }
+  .ask-panel{ position:relative; z-index:1; background:rgba(19,19,19,0.9); border:1px solid rgba(10,99,255,0.35); border-radius:var(--r-hero); padding:22px; text-align:left; box-shadow:0 40px 80px -30px rgba(10,99,255,0.35), 0 0 0 1px rgba(255,255,255,0.02); }
+  .ask-topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding-bottom:14px; border-bottom:1px solid var(--hairline-soft); }
+  .chat-select{ display:flex; align-items:center; gap:6px; background:var(--surface-2); padding:8px 14px; border-radius:var(--r-pill); font-size:13px; font-weight:500; color:var(--ink); }
+  .chat-select span{ color:var(--ink-faint); }
+  .chat-add{ width:32px; height:32px; border-radius:9px; background:var(--surface-2); display:flex; align-items:center; justify-content:center; font-size:17px; color:var(--ink-muted); }
+
+  .ask-row{ position:relative; display:flex; align-items:flex-start; gap:var(--sp-xs); border-radius:var(--r-md); padding:6px 4px 14px; min-height:64px; }
+  .ask-row textarea{ flex:1; background:none; border:none; outline:none; resize:none; color:var(--ink); font-family:inherit; font-size:16px; letter-spacing:-0.1px; padding:6px 4px; line-height:1.4; }
+  .ask-row textarea::placeholder{ color:#5c5c5c; }
+  .ask-cursor{ position:absolute; left:12px; top:16px; width:2px; height:18px; background:var(--accent-blue-soft); border-radius:1px; pointer-events:none; animation:hsmCursorBlink 1s steps(1) infinite; }
+  @keyframes hsmCursorBlink{ 0%, 49%{ opacity:1; } 50%, 100%{ opacity:0; } }
+  @media (prefers-reduced-motion: reduce){
+    .ask-cursor{ animation:none; opacity:0.6; }
+  }
+
+  .ask-bottom-row{ display:flex; align-items:center; justify-content:space-between; padding-top:12px; border-top:1px solid var(--hairline-soft); }
+  .model-tag{ font-size:13px; color:var(--ink-muted); display:flex; align-items:center; gap:6px; }
+  .model-tag span{ color:var(--ink-faint); }
+  .ask-send{ width:36px; height:36px; border-radius:var(--r-full); background:var(--primary); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .ask-send svg{ width:14px; height:14px; }
+
+  .chip-row{ display:flex; flex-wrap:nowrap; gap:6px; justify-content:flex-start; margin-top:var(--sp-md); position:relative; z-index:1; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding:0 4px 4px; -webkit-mask-image:linear-gradient(to right, transparent 0, black 16px, black calc(100% - 16px), transparent 100%); mask-image:linear-gradient(to right, transparent 0, black 16px, black calc(100% - 16px), transparent 100%); }
+  @supports (justify-content: safe center){
+    .chip-row{ justify-content:safe center; }
+  }
+  .chip-row::-webkit-scrollbar{ display:none; }
+  .chip-row .chip{ padding:7px 12px; flex:0 0 auto; white-space:nowrap; }
+  .ask-note{ text-align:center; color:var(--ink-faint); font-size:13px; margin:14px 0; }
+  .ask-note-top{ margin:14px 0 0; }
+  .ask-note-limit{ margin:var(--sp-md) 0 var(--sp-xl); }
+
+  .hero-ctas{ display:flex; gap:var(--sp-sm); justify-content:center; flex-wrap:wrap; margin-bottom:8px; }
+
+  .stat-line{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; color:var(--ink-faint); font-size:13px; }
+  .stat-line b{ color:var(--ink-muted); font-weight:600; }
+  .stat-line .dot{ color:#3a3a3a; }
+
+
+  /* ---------- hero badge (eyebrow pill above headline) ---------- */
+  .hero-badge{ display:inline-flex; align-items:center; padding:8px 18px; border:1px solid var(--hairline); border-radius:var(--r-pill); background:var(--surface-1); margin-bottom:22px; }
+  .hero-badge span{ font-size:12px; font-weight:600; letter-spacing:1.2px; text-transform:uppercase; color:var(--accent-blue-soft); }
+
+  /* ---------- hero stats (stacked number + label, dot separated) ---------- */
+  .hero-stats{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:28px; margin:0 0 14px; }
+  .hero-stats .stat{ display:flex; flex-direction:column; align-items:center; gap:3px; }
+  .hero-stats .stat .num{ font-size:22px; font-weight:700; letter-spacing:-0.4px; color:var(--ink); }
+  .hero-stats .stat .lbl{ font-size:12.5px; color:var(--ink-faint); }
+  .hero-stats .stat-dot{ color:var(--accent-blue-soft); font-size:14px; }
+
+  /* ============================================================
+     HSM REEL FILMSTRIP
+     Two angled, infinitely-looping horizontal rows of reel thumbnails.
+     Replaces the old 3D rotating image wheel.
+     ============================================================ */
+  :root{
+    --hsm-strip-one-duration: 40s;
+    --hsm-strip-two-duration: 50s;
+    --hsm-strip-one-angle: 5deg;
+    --hsm-strip-two-angle: -4deg;
+    --hsm-reel-card-width: 210px;
+    --hsm-reel-gap: 12px;
+    --hsm-reel-radius: 12px;
+  }
+
+  .hsm-filmstrip-wrap{ position:relative; width:100%; height:660px; margin-top:0; }
+  .hsm-filmstrip-row{ position:absolute; left:-15%; width:130%; }
+  .hsm-filmstrip-row-one{ top:0; transform:rotate(var(--hsm-strip-one-angle)); z-index:2; }
+  .hsm-filmstrip-row-two{
+    top:250px; height:calc(var(--hsm-reel-card-width) * 16 / 9);
+    transform:rotate(var(--hsm-strip-two-angle)); z-index:1;
+  }
+
+  /* Constant-speed, autonomous loop: starts moving the instant the page loads and
+     never changes pace, regardless of scrolling. -50% is exactly half of the
+     doubled track's own rendered width (a precise CSS percentage, not a measured
+     pixel value), so the restart point is always a pixel-perfect match: no seam. */
+  .hsm-filmstrip-track{
+    display:flex; align-items:center; gap:var(--hsm-reel-gap); width:max-content;
+    will-change:transform;
+    animation-timing-function:linear; animation-iteration-count:infinite;
+  }
+  .hsm-filmstrip-row-one .hsm-filmstrip-track{ animation-name:hsm-scroll; animation-duration:var(--hsm-strip-one-duration); }
+  .hsm-filmstrip-row-two .hsm-filmstrip-track{ animation-name:hsm-scroll; animation-duration:var(--hsm-strip-two-duration); animation-direction:reverse; }
+  @keyframes hsm-scroll{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
+
+  .hsm-filmstrip-card{
+    position:relative; flex:0 0 auto; width:var(--hsm-reel-card-width); aspect-ratio:9/16;
+    border-radius:var(--hsm-reel-radius); overflow:hidden; border:1px solid rgba(255,255,255,0.08);
+    box-shadow:0 18px 36px -16px rgba(0,0,0,0.7);
+    transition:filter .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .hsm-filmstrip-card img{ width:100%; height:100%; object-fit:cover; display:block; background:var(--surface-2); }
+  .hsm-filmstrip-row-two .hsm-filmstrip-card{ filter:brightness(0.88); opacity:0.92; }
+
+  .hsm-filmstrip-card.hsm-filmstrip-missing{ background:var(--surface-2); display:flex; align-items:center; justify-content:center; }
+  .hsm-filmstrip-card.hsm-filmstrip-missing::after{
+    content:attr(data-missing-file); font-size:10px; color:var(--ink-faint); text-align:center; padding:8px; word-break:break-all;
+  }
+
+  /* hover interaction: desktop / fine-pointer devices only. Movement never
+     stops on hover, it only highlights whichever card is under the cursor. */
+  @media (hover:hover) and (pointer:fine){
+    .hsm-filmstrip-row:hover .hsm-filmstrip-card:not(:hover){ filter:brightness(0.6) saturate(0.7); }
+    .hsm-filmstrip-card:hover{
+      filter:brightness(1.08) saturate(1.1);
+      transform:translateY(-8px) scale(1.035);
+      box-shadow:0 26px 46px -14px rgba(0,0,0,0.75), 0 0 0 1px rgba(77,139,255,0.55), 0 0 24px -4px rgba(77,139,255,0.4);
+      z-index:5;
+    }
+  }
+
+  @media(max-width:1024px){
+    :root{ --hsm-reel-card-width: 160px; }
+    .hsm-filmstrip-wrap{ height:480px; }
+    .hsm-filmstrip-row-two{ top:210px; }
+  }
+  /* ============================================================
+     MOBILE HERO REDESIGN (<768px)
+     Framer-mobile-referenced structural/typographic redesign. Scope:
+     header + hero section only. Desktop (>=768px) rules above are
+     untouched; new elements introduced for this redesign (support text,
+     dividers, reel panel wrapper, single-row metrics) default to
+     display:none / display:contents below, outside any media query, so
+     they render as nothing on desktop, and are only switched on inside
+     the @media(max-width:768px) block. Existing desktop elements that
+     mobile hides instead (.sub paragraph, .hero-stats) keep their
+     desktop rules completely untouched; mobile just adds a display:none
+     for them, matching the established pattern already used elsewhere
+     in this file (e.g. .hero-stats .stat-dot).
+     ============================================================ */
+  .hero-mobile-support{ display:none; }
+  .hero-divider{ display:none; }
+  .hsm-reel-panel{ display:contents; }
+  .hero-metrics-mobile{ display:none; }
+  .hsm-nav-toggle{ display:none; }
+  .hsm-mobile-nav{ display:none; }
+  .top-nav .brand .word-mobile{ display:none; }
+  .top-nav .brand .brand-signature{ display:none; }
+
+  @media(max-width:768px){
+
+    /* ---- header: exact Framer-mobile sizing spec, box-shadow-free flat
+       black bar, no bottom border. ---- */
+    .top-nav{
+      height:64px; min-height:64px;
+      background:#000000;
+      border-bottom:none;
+    }
+    .top-nav .wrap{
+      height:64px; min-height:64px; width:100%;
+      padding:0 20px; box-sizing:border-box;
+      display:flex; align-items:center; justify-content:space-between;
+      position:relative;
+    }
+    .top-nav .brand{
+      display:flex; align-items:center; gap:10px;
+      height:auto; min-width:0;
+    }
+    /* Goat mark: height-driven, auto width capped at 30px, never stretched
+       or cropped (object-fit:contain), nudged up 1px to optically align
+       with the brand text below (which is nudged down 1px in the other
+       direction — see .word). No circle/background, just the mark. */
+    .top-nav .brand .mark{
+      height:26px; width:auto; max-width:30px; flex-shrink:0;
+    }
+    .top-nav .brand .mark img{
+      height:26px; width:auto; max-width:30px;
+      object-fit:contain; flex-shrink:0;
+      transform:translateY(-1px);
+    }
+    /* Brand text: mobile-only literal "High status method" (see the
+       .word-mobile markup in the header HTML) — a real, separate DOM
+       string for mobile, not a CSS transform of the desktop text, so
+       desktop's own .word span (title case) is completely untouched. */
+    .top-nav .brand .word{ display:none; }
+    .top-nav .brand .word-mobile{
+      display:inline-block;
+      font-family:"Inter Variable", Inter, sans-serif;
+      font-size:14px; font-weight:400; line-height:14px;
+      letter-spacing:normal; color:#FFFFFF;
+      white-space:nowrap; min-width:0;
+      transform:translateY(1px);
+    }
+    /* "By Nish" signature mark, mobile-only: sits right after the wordmark
+       in the same flex row (.brand already has gap:10px, so no divider or
+       extra margin is added between them per explicit request). */
+    /* Cropped tight to the ink (source file had ~29% transparent padding on
+       every side, which was reading as extra, disconnected gap) so the
+       10px flex gap from .word-mobile is the true visual gap. Nudged down
+       2px to sit closer to the wordmark's optical baseline instead of the
+       plain vertical-center the flex box gives it by default, and slightly
+       reduced opacity so it reads as a secondary signature mark rather
+       than competing at full brightness with the primary wordmark. */
+    .top-nav .brand .brand-signature{
+      display:block; height:36px; width:auto; flex-shrink:0;
+      opacity:0.65; transform:translateY(2px);
+    }
+    .top-nav .actions{ display:flex; align-items:center; gap:20px; flex-shrink:0; }
+    /* Compact electric-orange Join button, not pill-shaped, not
+       full/fixed width — sized purely to its own label + padding.
+       Colour-only spec: background/hover/pressed match the mobile hero
+       primary CTA exactly, so joining reads as one consistent action. */
+    .top-nav .actions .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:max-content; height:30px; min-height:30px;
+      padding:8px 10px; border-radius:8px; border:none;
+      background:#FF5A00; color:#000000;
+      font-family:"Inter Variable", Inter, sans-serif;
+      font-size:14px; font-weight:500; line-height:14px;
+      white-space:nowrap; box-shadow:none; flex-shrink:0;
+      transition:background .15s, transform .1s;
+    }
+    .top-nav .actions .btn:hover{ background:#FF6A1A; }
+    .top-nav .actions .btn:active{ background:#E95000; transform:translateY(1px); }
+
+    /* ---- hamburger: only appears below 768px, only reveals the existing
+       desktop <nav> links (Method / AI Coach / Pricing / FAQ), which are
+       otherwise unreachable below the 860px desktop-nav breakpoint. ---- */
+    .hsm-nav-toggle{
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      gap:4px; width:24px; height:24px; padding:0; flex-shrink:0;
+    }
+    .hsm-nav-toggle-bar{ display:block; width:24px; height:2px; background:#FFFFFF; border-radius:2px; }
+    .hsm-mobile-nav{
+      display:flex; flex-direction:column;
+      position:absolute; left:0; right:0; top:64px;
+      background:#000; border-bottom:1px solid #1E1E1E;
+      padding:6px 20px 14px; gap:0;
+      opacity:0; transform:translateY(-6px); pointer-events:none;
+      transition:opacity .18s ease, transform .18s ease;
+    }
+    .hsm-mobile-nav.is-open{ opacity:1; transform:translateY(0); pointer-events:auto; }
+    .hsm-mobile-nav a{
+      font-family:var(--font-mobile-body); font-weight:500; font-size:15px;
+      color:#ccc; padding:13px 0; border-bottom:1px solid #161616;
+    }
+    .hsm-mobile-nav a:last-child{ border-bottom:none; }
+
+    /* ---- hero container: left-aligned, no centering ---- */
+    .hero{ padding:61px 0 0; overflow:hidden; text-align:left; }
+    .hero > .wrap:first-of-type{
+      padding:0 20px; margin:0; text-align:left; max-width:none;
+    }
+/* ---- headline: exact Framer-mobile sizing spec — fixed 36px (no
+       clamp/vw), GT Walsheim Pro Medium via the licensed @font-face above.
+       Wording is unchanged; only sizing/spacing/alignment/weight change.
+       Wraps naturally (no forced breaks) within the 20px page padding on
+       .hero > .wrap:first-of-type above. ---- */
+    .hero h1{
+      font-family:"GT Walsheim Pro", "GT Walsheim Medium", sans-serif;
+      font-size:36px;
+      font-weight:500;
+      line-height:1em;
+      letter-spacing:-0.04em;
+      font-style:normal;
+      text-align:left;
+      margin:0;
+      width:100%;
+      max-width:100%;
+      font-feature-settings:"ss02" 1;
+    }
+    /* Visual-only sentence case ("Create content that shapes your
+       perception"): the accessible text stays "Create Content That Shapes
+       Your Perception" (unchanged on desktop, which reuses this exact same
+       markup), this just lowercases the rendered word(s) after "Create" on
+       mobile only — same technique as the nav brand and primary button
+       above. */
+    .hero h1 .hl-rest{ text-transform:lowercase; }
+
+    /* ---- old descriptive paragraph: removed from the mobile hero (not
+       shown anywhere else in it either). Desktop's own .sub rule above is
+       completely untouched. ---- */
+    .hero .sub{ display:none; }
+
+    /* ---- old desktop stats row: hidden on mobile, replaced structurally
+       by .hero-metrics-mobile further down (after the Reel showcase).
+       Desktop's own .hero-stats rules above are completely untouched. ---- */
+    .hero-stats{ display:none; }
+
+    /* ---- buttons: exact Framer-mobile component spec. Row uses
+       justify-content:flex-start with no flex-grow on either button, so
+       each one sizes purely to its own label + padding (width:max-content)
+       — no equal widths, no stretching. ---- */
+    .hero-ctas{
+      display:flex; align-items:center; flex-wrap:nowrap;
+      justify-content:flex-start; gap:10px; margin-top:24px;
+      width:100%; max-width:100%;
+    }
+    .hero-ctas .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:max-content; height:35px; max-height:35px;
+      padding:10px 14px; border-radius:8px;
+      font-family:"Inter Variable", Inter, sans-serif;
+      font-size:14px; font-weight:400; line-height:14px;
+      letter-spacing:normal; white-space:nowrap; box-sizing:border-box;
+      flex:0 0 auto;
+    }
+    /* Primary CTA reverted to white per explicit request — only the nav
+       Join button keeps the orange treatment now. */
+    .hero-ctas .btn-primary{ background:#FFFFFF; color:#000000; border:none; box-shadow:none; }
+    .hero-ctas .btn-secondary{ background:#191919; color:#FFFFFF; border:1px solid #292929; box-shadow:none; }
+
+    /* ---- new mobile supporting text (replaces the old paragraph) ---- */
+    .hero-mobile-support{ display:block; margin:24px 0 0; }
+    .hero-mobile-line1{
+      font-family:var(--font-mobile-body); font-weight:500;
+      font-size:15px; line-height:1.4; color:#E5E5E5;
+      max-width:100%; text-align:left; margin:0 0 8px;
+    }
+    .hero-mobile-line2{
+      font-family:var(--font-mobile-body); font-weight:400;
+      font-size:13.5px; line-height:1.4; color:#858585;
+      max-width:100%; text-align:left; margin:0 0 38px;
+    }
+
+    /* ---- dividers: two full-bleed 1px hairlines, one directly above and
+       one directly below the Reel band. Both are direct children of .hero
+       (not the padded wrap), so at 100% width they naturally reach both
+       screen edges with no inset. ---- */
+    .hero-divider{ display:block; height:1px; background:#1E1E1E; width:100%; margin:0; }
+
+    /* ---- Reel showcase: plain full-bleed band, no panel/border/radius/
+       padding (mobile only; display:contents on desktop above means this
+       wrapper renders zero box there, so the desktop filmstrip is
+       pixel-identical to before). All sizing lives on .hsm-filmstrip-wrap
+       itself so the images sit flush against both dividers with zero gap. ---- */
+    .hsm-reel-panel{
+      display:block; width:100%; margin:0;
+      background:none; border:none; border-radius:0; padding:0; overflow:visible;
+    }
+    :root{
+      /* Width-driven (matches the base/desktop rule's own pattern: a
+         definite width + aspect-ratio:9/16, which derives the height).
+         The width is computed FROM the target band height (clamp(210px,
+         56vw,240px) * 9/16) so the visual result is identical to a
+         height-driven card, but stays a plain, well-supported definite
+         width instead of width:auto — a percentage-height/auto-width
+         combination was measured to intermittently fail to paint image
+         content in some rendering contexts. */
+      --hsm-reel-card-width: calc(clamp(210px, 56vw, 240px) * 9 / 16);
+      --hsm-reel-gap: 9px;
+      --hsm-reel-radius: 9px;
+      --hsm-strip-one-angle: 0deg;
+      --hsm-strip-one-duration: 40s;
+    }
+    .hsm-filmstrip-wrap{
+      width:100%; height:clamp(210px, 56vw, 240px);
+      margin:0; overflow:hidden;
+      scrollbar-width:none;
+    }
+    .hsm-filmstrip-wrap::-webkit-scrollbar{ display:none; }
+    .hsm-filmstrip-row-two{ display:none; }
+    .hsm-filmstrip-row-one{
+      position:relative; left:0; width:100%; top:0; transform:none;
+      display:flex; align-items:center; height:100%;
+    }
+    .hsm-filmstrip-card{
+      aspect-ratio:9/16;
+      border-radius:var(--hsm-reel-radius);
+      border:none; box-shadow:none;
+    }
+    /* Source images are already cropped to a native 9:16 ratio (verified:
+       438x779px, ratio 0.5623 vs the card's exact 0.5625), so object-fit:cover
+       performs no meaningful crop here and the original baked-in view count
+       in the bottom-left corner of every image stays fully visible. If a
+       differently-shaped image is ever swapped in later, switch this to
+       object-fit:contain with a black card background instead. */
+    .hsm-filmstrip-card img{ object-fit:cover; object-position:center; }
+
+    /* ---- single-row metrics (mobile-only; desktop's .hero-stats above is
+       untouched). Same four real values/labels as desktop, just relocated
+       after the Reel showcase per the required mobile content order. ---- */
+    .hero-metrics-mobile{
+      display:grid; grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:5px; padding:34px 16px; margin:0;
+    }
+    .hero-metrics-mobile .metric{
+      display:flex; flex-direction:column; align-items:center;
+      text-align:center; min-width:0;
+    }
+    .hero-metrics-mobile .v{
+      font-family:var(--font-mobile-display); font-weight:500;
+      font-size:clamp(17px, 4.8vw, 22px); line-height:1;
+      letter-spacing:-0.02em; color:#fff; white-space:nowrap;
+    }
+    .hero-metrics-mobile .l{
+      font-family:var(--font-mobile-body); font-weight:400;
+      font-size:10px; line-height:1.2; color:#7F7F7F; margin-top:5px;
+    }
+    /* Entrance treatment on load: "Views Generated" and "Followers Built"
+       count up from zero (see script below); "Years Experience" and
+       "Founders Worked With" aren't real counts, so they just fade/rise in
+       on the same staggered beat instead. Numbers/labels start invisible so
+       there's no flash of the final values before the script runs; the
+       reveal class is JS-driven, never a bare CSS default, so this degrades
+       to just-visible if JS is ever unavailable (see noscript fallback). */
+    .hero-metrics-mobile .metric{ opacity:0; transform:translateY(6px); transition:opacity .4s ease, transform .4s ease; }
+    .hero-metrics-mobile .metric.hsm-metric-in{ opacity:1; transform:translateY(0); }
+
+    /* ---- floating UI: keep it off buttons/text/images ---- */
+    body.hsm-hide-chat #chatbase-bubble-button,
+    body.hsm-hide-chat #chatbase-message-bubbles{
+      display:none !important;
+    }
+  }
+
+  /* 374px-and-below fallback: if the exact button labels can't fit at
+     14px horizontal padding, tighten to 10px first, per spec — the 36px
+     headline size is never reduced at any mobile width. Placed after
+     the 768px block so it wins ties at this narrower range. */
+  @media(max-width:374px){
+    .hero-ctas .btn{ padding:10px 10px; }
+  }
+  /* Measured: "Join high status method" + "See what's inside" together
+     still don't fit one row even at 10px padding below ~365px (needs
+     ~325px of row width, only ~280px is available inside the 20px page
+     padding at 320-364px). Per spec, padding reduction is tried first
+     (above) and stacking is the explicit next fallback only once that's
+     not enough — this is that fallback, scoped to just the narrow gap
+     where it's actually needed (320-364px; 375px+ stays one row). */
+  @media(max-width:364px){
+    .hero-ctas{ flex-direction:column; align-items:flex-start; }
+    .hero-ctas .btn{ width:max-content; }
+  }
+
+  /* Reduced motion: freeze the row, present it as a static, natively swipeable
+     strip instead. This MUST be the last rule touching these properties (after
+     every breakpoint above) — media queries carry no extra specificity, so
+     whichever block comes later in the file wins ties. It used to sit above the
+     640px block, which meant the phone breakpoint's overflow:hidden silently
+     clobbered this block's overflow-x:auto on any iPhone with Reduce Motion on:
+     the row went fully static AND untouchable, with no way to move it at all. */
+  @media (prefers-reduced-motion: reduce){
+    .hsm-filmstrip-track{ animation:none !important; transform:none !important; }
+    .hsm-filmstrip-wrap{ height:auto !important; overflow:visible !important; overflow-x:auto !important; overflow-y:visible !important; -webkit-overflow-scrolling:touch; }
+    .hsm-filmstrip-row{ position:relative !important; left:0 !important; width:auto !important; top:auto !important; transform:none !important; margin-bottom:var(--hsm-reel-gap); height:auto !important; }
+  }
+
+  /* ---------- sections ---------- */
+  .section{ padding:var(--sp-section) 0; }
+  .section-head{ max-width:620px; margin-bottom:var(--sp-xl); }
+  .section-head .eyebrow{ color:var(--accent-blue-soft); margin-bottom:var(--sp-sm); }
+  .section-head h2{ margin-bottom:var(--sp-xs); }
+  .section-head p{ color:var(--ink-muted); }
+  .section-head.center{ margin-left:auto; margin-right:auto; text-align:center; }
+
+  /* ---------- inside the membership section ---------- */
+  #membership .section-head .eyebrow{ color:var(--ink); }
+  #membership .real-badge{ color:var(--neon-green); text-shadow:0 0 10px rgba(57,255,106,0.55); }
+  #membership .real-badge .rp-dot{ background:var(--neon-green); box-shadow:0 0 8px 1px rgba(57,255,106,0.7); }
+
+  .pillar-list{ display:flex; flex-direction:column; border-top:1px solid var(--hairline-soft); }
+  .pillar-row{ border-bottom:1px solid var(--hairline-soft); padding:var(--sp-lg) 0; }
+  .pillar-row.flagship{ background:linear-gradient(180deg, rgba(255,255,255,0.05), transparent 60%); margin:0 -20px; padding:var(--sp-lg) 20px; border-radius:var(--r-lg); }
+  .pillar-q{ display:flex; align-items:flex-start; gap:var(--sp-md); cursor:pointer; }
+  .pillar-num{ font-family:var(--font-display); font-size:14px; font-weight:600; color:var(--ink); width:28px; flex-shrink:0; padding-top:4px; }
+  .pillar-head{ flex:1; }
+  .pillar-head .badge-row{ display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap; }
+  .pillar-head h3{ font-family:var(--font-display); font-size:21px; font-weight:600; letter-spacing:-0.4px; }
+  .pillar-head .hook{ color:var(--ink-muted); font-size:15px; margin-top:4px; }
+  .pillar-icon{ font-size:22px; color:var(--ink); flex-shrink:0; transition:transform .2s; line-height:1; padding-top:2px; }
+  .pillar-row.open .pillar-icon{ transform:rotate(45deg); }
+  .pillar-body{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .pillar-row.open .pillar-body{ max-height:3000px; }
+  .pillar-body-inner{ padding:var(--sp-md) 0 4px 44px; }
+  .pillar-desc{ color:var(--ink-muted); font-size:15px; line-height:1.5; max-width:560px; margin-bottom:var(--sp-md); }
+  a.pillar-cta{ display:inline-block; margin-top:var(--sp-md); color:var(--accent-blue-soft); text-decoration-color:rgba(77,139,255,0.4); }
+  a.pillar-cta:hover{ text-decoration-color:var(--accent-blue-soft); }
+
+  .check-list{ display:grid; grid-template-columns:1fr; list-style:none; }
+  .check-list.cols-2{ grid-template-columns:1fr; }
+  @media(min-width:560px){ .check-list.cols-2{ grid-template-columns:1fr 1fr; column-gap:28px; } }
+  .check-list li{ display:flex; align-items:flex-start; gap:10px; padding:9px 0; border-top:1px solid var(--hairline-soft); font-size:14.5px; color:var(--ink-muted); }
+  .check-list li svg{ width:13px; height:13px; stroke:var(--ink); flex-shrink:0; margin-top:3px; }
+  .check-list.compact li{ font-size:13px; padding:7px 0; }
+
+  .intel-grid{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:4px; }
+  @media(min-width:700px){ .intel-grid{ grid-template-columns:1fr 1fr; } }
+  .intel-card{ background:var(--surface-1); border:1px solid var(--hairline-soft); border-radius:var(--r-lg); padding:var(--sp-md); }
+  .intel-card h4{ font-size:14px; font-weight:600; letter-spacing:0.3px; text-transform:uppercase; color:var(--ink); margin-bottom:6px; }
+  .intel-card p{ color:var(--ink-muted); font-size:14px; line-height:1.45; margin-bottom:10px; }
+
+  .review-glow-wrap{ position:relative; max-width:480px; margin:0 auto var(--sp-md); }
+  .review-glow-wrap::before{
+    content:''; position:absolute; inset:-50px; z-index:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 25%, rgba(255,255,255,0.18), rgba(255,255,255,0.05) 45%, transparent 70%);
+    filter:blur(26px);
+    animation:hsmReviewGlow 3.6s ease-in-out infinite;
+  }
+  @keyframes hsmReviewGlow{ 0%,100%{ opacity:0.65; } 50%{ opacity:1; } }
+  @media(prefers-reduced-motion:reduce){ .review-glow-wrap::before{ animation:none; } .price-glow-wrap::before{ animation:none; } }
+  #membership .review-panel{ position:relative; z-index:1; display:flex; flex-direction:column; gap:8px; background:var(--surface-3); border:1px solid var(--hairline); border-radius:var(--r-lg); padding:18px; }
+  #membership .review-panel .rp-head{ display:flex; align-items:center; justify-content:space-between; margin-bottom:4px; }
+  #membership .review-panel .rp-title{ font-size:13px; font-weight:600; }
+  #membership .review-panel .rp-tag{ font-size:10.5px; font-weight:600; padding:3px 9px; border-radius:6px; background:rgba(34,197,94,0.14); color:var(--success); }
+  .review-comment{ display:flex; gap:10px; background:var(--surface-1); border-radius:8px; padding:9px 11px; align-items:flex-start; }
+  .review-comment .ts{ font-family:var(--font-display); font-size:11px; font-weight:600; color:var(--ink); flex-shrink:0; padding-top:1px; }
+  .review-comment .cm{ font-size:13px; color:var(--ink); line-height:1.35; }
+  .review-verdict{ margin-top:2px; font-size:12.5px; color:var(--ink-faint); }
+  .review-verdict b{ color:var(--ink-muted); }
+
+  .membership-cta{ margin-top:var(--sp-xl); display:flex; align-items:center; justify-content:space-between; gap:var(--sp-lg); flex-wrap:wrap; }
+  .membership-cta .price-line{ color:var(--ink-muted); font-size:14px; }
+  .membership-cta .price-line b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- card grid ---------- */
+  .grid{ display:grid; grid-template-columns:1fr; gap:var(--sp-lg); }
+  @media(min-width:810px){ .grid-2{ grid-template-columns:repeat(2,1fr); } }
+  @media(min-width:810px){ .grid-3{ grid-template-columns:repeat(3,1fr); } }
+
+  .card{ background:var(--surface-1); border:1px solid var(--hairline-soft); border-radius:var(--r-xl); padding:var(--sp-lg); }
+  .card .icon-wrap{ width:36px; height:36px; border-radius:var(--r-full); background:var(--surface-2); display:flex; align-items:center; justify-content:center; margin-bottom:var(--sp-md); }
+  .card .icon-wrap svg{ width:16px; height:16px; stroke:var(--ink); }
+  .card h3{ font-size:18px; font-weight:600; letter-spacing:-0.3px; margin-bottom:var(--sp-xxs); }
+  .card p{ color:var(--ink-muted); font-size:14px; line-height:1.45; }
+
+  /* ---------- FEATURE / SPLIT PANEL (framer-style: UI mock left, agent view right) ---------- */
+  .feature-block{ margin-bottom:88px; }
+  .feature-block:last-child{ margin-bottom:0; }
+  .split-panel{
+    background:var(--surface-3); border:1px solid var(--hairline); border-radius:var(--r-hero);
+    padding:14px; display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:30px; overflow:hidden;
+  }
+  @media(min-width:900px){ .split-panel{ grid-template-columns:1.2fr 1fr; padding:20px; gap:20px; min-height:400px; } }
+  .panel-left, .panel-right{ background:#0a0a0a; border-radius:var(--r-lg); border:1px solid var(--hairline-soft); overflow:hidden; display:flex; flex-direction:column; }
+  .panel-left{ min-height:280px; }
+  .panel-right{ padding:18px; min-height:280px; }
+  .panel-left.panel-video{ padding:0; }
+  .real-demo{ width:100%; flex:1; object-fit:cover; object-position:top; display:block; background:#000; }
+  .real-badge{ display:inline-flex; align-items:center; gap:6px; font-size:11px; font-weight:600; color:#22c55e; letter-spacing:0.2px; }
+  .real-badge .rp-dot{ width:6px; height:6px; }
+
+  /* ---------- glow-trail animated border (svg path-based, one soft continuous electric glow) ---------- */
+  .glow-border{ position:relative; }
+  .glow-svg{ position:absolute; inset:0; width:100%; height:100%; z-index:6; pointer-events:none; overflow:visible; }
+  .glow-rect{ fill:none; stroke:#6fa8ff; stroke-width:1.6; stroke-linecap:round; stroke-dasharray:38 62; opacity:0.72; animation:trail-move 3.72s linear infinite; }
+  @keyframes trail-move{ to{ stroke-dashoffset:-100; } }
+  .panel-left.panel-video{ box-shadow:0 0 60px -12px rgba(10,99,255,0.45); }
+
+  .feature-caption{ max-width:640px; }
+  .feature-caption h3{ margin-bottom:10px; }
+  .feature-caption p{ color:var(--ink-muted); margin-bottom:12px; }
+
+  /* mock toolbar shared */
+  .mock-toolbar{ display:flex; align-items:center; gap:10px; padding:12px 16px; border-bottom:1px solid var(--hairline-soft); flex-shrink:0; }
+  .mock-dots{ display:flex; gap:5px; }
+  .mock-dots span{ width:8px; height:8px; border-radius:50%; background:#2a2a2a; display:block; }
+  .mock-toolbar .mock-label{ font-size:12px; color:var(--ink-faint); margin-left:2px; }
+  .mock-body{ flex:1; padding:18px; }
+
+  /* mock 1: lesson / video player */
+  .mock-player{ background:linear-gradient(160deg,#171717,#0a0a0a); border-radius:10px; aspect-ratio:16/9; display:flex; align-items:center; justify-content:center; position:relative; margin-bottom:14px; border:1px solid var(--hairline-soft); }
+  .mock-play{ width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,0.92); display:flex; align-items:center; justify-content:center; }
+  .mock-play svg{ width:14px; height:14px; fill:#000; margin-left:2px; }
+  .mock-caption{ font-size:13px; font-weight:600; margin-bottom:4px; }
+  .mock-caption-sub{ font-size:12px; color:var(--ink-faint); margin-bottom:12px; }
+  .mock-progress{ height:4px; border-radius:2px; background:var(--hairline); overflow:hidden; }
+  .mock-progress i{ display:block; height:100%; width:38%; background:var(--accent-blue-soft); }
+
+  /* mock 2: curriculum sidebar + timeline */
+  .mock-curriculum{ display:grid; grid-template-columns:1fr; gap:12px; }
+  @media(min-width:480px){ .mock-curriculum{ grid-template-columns:0.85fr 1fr; } }
+  .mock-chapter-list{ display:flex; flex-direction:column; gap:8px; }
+  .mock-chapter{ display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink-muted); padding:7px 10px; border-radius:8px; background:var(--surface-1); }
+  .mock-chapter.done{ color:var(--ink); }
+  .mock-chapter .chk{ width:14px; height:14px; border-radius:50%; border:1px solid var(--hairline); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+  .mock-chapter.done .chk{ background:var(--success); border-color:var(--success); }
+  .mock-chapter.done .chk svg{ width:8px; height:8px; stroke:#000; }
+  .mock-timeline{ background:var(--surface-1); border-radius:10px; padding:12px; display:flex; flex-direction:column; gap:8px; justify-content:center; }
+  .mock-clip-row{ display:flex; gap:3px; height:20px; }
+  .mock-clip{ flex:1; border-radius:3px; background:var(--surface-2); }
+  .mock-clip.a{ background:#2a4a8c; flex:1.6; }
+  .mock-clip.b{ background:#3a3a3a; flex:0.7; }
+  .mock-clip.c{ background:#5a2f52; flex:1.2; }
+
+  /* mock 3: submission grid */
+  .mock-grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+  .mock-tile{ aspect-ratio:9/13; border-radius:8px; position:relative; overflow:hidden; }
+  .mock-tile.g1{ background:linear-gradient(155deg,#3a2f52,#0a0a0a); }
+  .mock-tile.g2{ background:linear-gradient(155deg,#1f3a55,#0a0a0a); }
+  .mock-tile.g3{ background:linear-gradient(155deg,#4a2f2f,#0a0a0a); }
+  .mock-tile.g4{ background:linear-gradient(155deg,#2f4a3a,#0a0a0a); }
+  .mock-tile.g5{ background:linear-gradient(155deg,#4a3a1f,#0a0a0a); }
+  .mock-tile.g6{ background:linear-gradient(155deg,#2f2f4a,#0a0a0a); }
+  .mock-badge{ position:absolute; bottom:6px; left:6px; font-size:9px; font-weight:600; padding:3px 6px; border-radius:5px; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); }
+  .mock-badge.rev{ color:var(--success); }
+  .mock-badge.pen{ color:var(--ink-faint); }
+
+  /* right panel type A: chat sidebar */
+  .rp-head{ display:flex; align-items:center; gap:8px; margin-bottom:16px; }
+  .rp-dot{ width:7px; height:7px; border-radius:50%; background:var(--success); }
+  .rp-title{ font-size:13px; font-weight:600; }
+  .chat-msg{ border-radius:14px; padding:10px 13px; font-size:13px; line-height:1.4; margin-bottom:10px; max-width:92%; }
+  .chat-msg.user{ background:var(--surface-2); color:var(--ink); align-self:flex-end; margin-left:auto; border-radius:14px 14px 4px 14px; }
+  .chat-msg.ai{ background:var(--surface-1); color:var(--ink-muted); border-radius:14px 14px 14px 4px; }
+  .chat-thinking{ font-size:12px; color:var(--accent-blue-soft); margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+  .chat-body{ display:flex; flex-direction:column; flex:1; }
+  .chat-input-mock{ margin-top:auto; background:var(--surface-2); border-radius:10px; padding:10px 12px; display:flex; justify-content:space-between; align-items:center; font-size:12px; color:var(--ink-faint); }
+
+  /* right panel type B: data table */
+  .rp-table{ display:flex; flex-direction:column; gap:8px; }
+  .rp-row{ display:grid; grid-template-columns:1.4fr 1fr; gap:8px; align-items:center; padding:9px 10px; border-radius:8px; background:var(--surface-1); font-size:12.5px; }
+  .rp-row.head{ background:none; color:var(--ink-faint); font-size:11px; text-transform:uppercase; letter-spacing:0.5px; padding:0 10px; }
+  .rp-tag{ font-size:10.5px; font-weight:600; padding:3px 8px; border-radius:6px; width:fit-content; }
+  .rp-tag.rev{ background:rgba(34,197,94,0.14); color:var(--success); }
+  .rp-tag.pen{ background:var(--surface-2); color:var(--ink-faint); }
+
+  /* right panel type C: terminal */
+  .rp-terminal{ font-family:var(--font-mono); font-size:12.5px; color:var(--ink-muted); line-height:1.9; flex:1; display:flex; flex-direction:column; }
+  .rp-terminal .cmd{ color:var(--ink); }
+  .rp-terminal .file{ color:var(--accent-blue-soft); }
+  .rp-callout{ margin-top:14px; border:1px solid rgba(10,99,255,0.4); border-radius:10px; padding:10px 12px; font-size:12px; color:var(--ink); background:rgba(10,99,255,0.06); }
+
+  /* ---------- gradient spotlight (scarce) ---------- */
+  .spot{ border-radius:var(--r-xxl); padding:var(--sp-xl); color:#fff; position:relative; overflow:hidden; display:flex; flex-direction:column; justify-content:flex-end; min-height:280px; }
+  .spot h3{ font-size:24px; font-weight:600; line-height:1.3; letter-spacing:-0.3px; margin-bottom:var(--sp-xs); position:relative; z-index:1; }
+  .spot p{ font-size:14px; line-height:1.4; opacity:0.92; position:relative; z-index:1; max-width:420px; }
+  .spot::before{ content:''; position:absolute; inset:0; opacity:0.6; background:radial-gradient(circle at 75% 15%, rgba(255,255,255,0.35), transparent 55%); }
+  .spot-blue{ background:linear-gradient(160deg, #1c5cff, #0a2f8c 70%); }
+
+  /* ---------- stats ---------- */
+  .stat-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--hairline); border-radius:var(--r-xl); overflow:hidden; }
+  @media(min-width:810px){ .stat-grid{ grid-template-columns:repeat(3,1fr); } }
+  .stat-cell{ background:var(--surface-1); padding:var(--sp-lg); }
+  .stat-cell .n{ font-size:32px; font-weight:600; letter-spacing:-1px; }
+  .stat-cell .cap{ color:var(--ink-muted); font-size:13px; margin-top:6px; }
+
+  /* ---------- credibility list ---------- */
+  .cred-list{ max-width:760px; }
+  .cred-row{ display:flex; gap:var(--sp-md); padding:var(--sp-md) 0; border-top:1px solid var(--hairline-soft); }
+  .cred-row:last-child{ border-bottom:1px solid var(--hairline-soft); }
+  .cred-row .n{ color:var(--accent-blue-soft); font-size:13px; font-weight:600; width:26px; flex-shrink:0; padding-top:2px; }
+  .cred-row p{ font-size:15px; color:var(--ink); line-height:1.45; }
+  #why-it-works .section-head .eyebrow{ color:var(--ink); }
+  #why-it-works .cred-row .n{ color:var(--ink); }
+
+  /* ---------- pricing ---------- */
+  .price-glow-wrap{ position:relative; display:flex; justify-content:center; }
+  .price-glow-wrap::before{
+    content:''; position:absolute; inset:-60px; z-index:0; pointer-events:none;
+    background:radial-gradient(circle at 50% 30%, rgba(255,255,255,0.16), rgba(255,255,255,0.04) 45%, transparent 70%);
+    filter:blur(30px);
+    animation:hsmReviewGlow 3.6s ease-in-out infinite;
+  }
+  .price-wrap{ position:relative; z-index:1; display:flex; justify-content:center; }
+  .price-card{ background:var(--surface-1); border:1px solid var(--hairline); border-radius:var(--r-xl); padding:26px; max-width:420px; width:100%; }
+  .price-card .plan{ font-size:22px; font-weight:700; letter-spacing:-0.6px; margin-bottom:16px; }
+  .price-card .plan-brand{ display:flex; flex-direction:row; align-items:center; justify-content:center; gap:10px; height:26px; text-align:center; margin-bottom:16px; }
+  .price-card .plan-brand .plan-logo{
+    height:26px; width:auto; max-width:30px;
+    object-fit:contain; flex-shrink:0;
+    transform:translateY(-1px);
+  }
+  .price-card .plan-brand .plan-name{
+    font-family:"Inter Variable", Inter, sans-serif;
+    font-size:14px; font-weight:400; line-height:14px;
+    letter-spacing:normal; color:var(--ink);
+    transform:translateY(1px);
+  }
+  .price-toggle{ display:flex; background:var(--surface-3); border:1px solid var(--hairline); border-radius:var(--r-pill); padding:4px; margin-bottom:20px; position:relative; }
+  .price-toggle button{
+    flex:1; position:relative; z-index:1; border:none; background:transparent; cursor:pointer;
+    font-family:inherit; font-size:13px; font-weight:600; letter-spacing:-0.1px; color:var(--ink-muted);
+    padding:9px 0; border-radius:var(--r-pill); transition:color .25s ease;
+  }
+  .price-toggle button.active{ color:var(--on-primary); }
+  .price-toggle .toggle-thumb{
+    position:absolute; top:4px; left:4px; width:calc(50% - 4px); height:calc(100% - 8px);
+    background:var(--primary); border-radius:var(--r-pill); z-index:0;
+    transition:transform .28s cubic-bezier(.4,0,.2,1);
+  }
+  .price-toggle.is-membership .toggle-thumb{ transform:translateX(100%); }
+  .amt-wrap{ position:relative; min-height:52px; margin-bottom:4px; }
+  .price-card .amt{ display:flex; align-items:baseline; justify-content:flex-start; gap:6px; position:absolute; inset:0; opacity:0; transform:translateY(4px); transition:opacity .22s ease, transform .22s ease; pointer-events:none; margin-bottom:0; }
+  .price-card .amt.active{ opacity:1; transform:translateY(0); pointer-events:auto; position:relative; }
+  .price-card .amt .n{ font-size:40px; font-weight:600; letter-spacing:-1px; }
+  .price-card .amt .per{ color:var(--ink-muted); font-size:13px; }
+  .price-card .price-anchor{ color:var(--ink-muted); font-size:13px; margin-bottom:var(--sp-lg); min-height:18px; text-align:left; }
+  .price-card .sub{ color:var(--ink-muted); font-size:13px; margin-bottom:var(--sp-lg); }
+  .price-list-label{
+    font-size:11px; font-weight:600; letter-spacing:0.3px; text-transform:uppercase; color:var(--accent-blue-soft);
+    margin:0; height:0; opacity:0; overflow:hidden; transition:opacity .2s ease;
+  }
+  .price-list-wrap{ position:relative; min-height:230px; margin-bottom:var(--sp-lg); }
+  .price-list{ list-style:none; margin:0; padding:0; position:absolute; inset:0; opacity:0; transition:opacity .2s ease; }
+  .price-list.active{ opacity:1; position:relative; }
+  .price-list li{ display:flex; gap:10px; font-size:14px; padding:10px 0; border-top:1px solid var(--hairline); }
+  .price-list li:first-child{ border-top:none; }
+  .price-list svg{ width:14px; height:14px; stroke:var(--success); flex-shrink:0; margin-top:2px; }
+  .price-card .btn{ width:100%; }
+  .price-fine{ text-align:center; font-size:12px; color:var(--ink-faint); margin-top:var(--sp-sm); }
+
+  /* ---------- pricing: mobile-only variant (below 768px) ----------
+     Desktop pricing block (.pricing-desktop) is untouched. This mobile
+     block (.pricing-mobile) is a separate, parallel structure so the
+     reordered toggle, new copy, and 6-item coaching list can differ
+     from desktop without touching a single desktop rule or ID. */
+  .pricing-mobile{ display:none; }
+  @media(max-width:768px){
+    .pricing-desktop{ display:none; }
+    .pricing-mobile{ display:block; }
+    .mtoggle button{ padding:12px 4px; min-height:24px; }
+    .mtoggle button:focus-visible{ outline:2px solid var(--accent-blue-soft); outline-offset:2px; }
+    .mtoggle.is-coaching .toggle-thumb{ transform:translateX(100%); }
+    #mPriceListWrap{ min-height:310px; }   /* true tallest list (1:1 coaching, 6 items) measures ~299px on device; 440px was oversized and left a visible gap above the CTA */
+    #mListCoaching li{ font-size:13px; padding:9px 0; }
+    /* Relationship label always reserves its line — membership state just
+       makes it invisible (opacity), never collapses the space, so the
+       card never resizes when switching states. */
+    #mPriceListLabel{ height:16px; margin-bottom:10px; overflow:visible; }
+    /* Sub-line and CTA both change length between states ("$3.30/day" vs
+       "Six-week private coaching program"; "Get full access" vs "Apply for
+       1:1 coaching"), and the longer coaching copy can wrap to two lines.
+       Reserve space for the tallest variant so the card never resizes. */
+    #mPriceSub{ min-height:36px; }
+    #mPriceCta{ min-height:54px; }
+  }
+  @media(prefers-reduced-motion:reduce){
+    .pricing-mobile .toggle-thumb{ transition:none; }
+    .pricing-mobile .amt{ transition:none; transform:none; }
+    .pricing-mobile .price-list{ transition:none; transform:none; }
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq-wrap{ max-width:760px; }
+  .faq-row{ background:var(--canvas); border-radius:var(--r-md); padding:var(--sp-lg) 0; border-top:1px solid var(--hairline-soft); }
+  .faq-row:last-child{ border-bottom:1px solid var(--hairline-soft); }
+  .faq-q{ display:flex; align-items:center; justify-content:space-between; cursor:pointer; gap:var(--sp-md); width:100%; background:none; border:none; padding:0; margin:0; font:inherit; color:inherit; text-align:left; -webkit-appearance:none; appearance:none; }
+  .faq-q p{ font-size:16px; font-weight:500; letter-spacing:-0.2px; }
+  .faq-icon{ font-size:20px; color:var(--accent-blue-soft); flex-shrink:0; transition:transform .2s; }
+  .faq-row.open .faq-icon{ transform:rotate(45deg); }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
+  .faq-row.open .faq-a{ max-height:200px; }
+  .faq-a p{ font-size:15px; color:var(--ink-muted); padding-top:var(--sp-sm); line-height:1.45; }
+  @media(prefers-reduced-motion:reduce){
+    .faq-icon{ transition:none; }
+    .faq-a{ transition:none; }
+  }
+  @media(max-width:768px){
+    .faq-row.open .faq-a{ max-height:420px; }
+  }
+
+  /* ---------- final cta ---------- */
+  .cta-band{ text-align:center; padding:var(--sp-section) 0; position:relative; }
+  .cta-band h2{ max-width:640px; margin:0 auto var(--sp-xs); }
+  .cta-band p{ color:var(--ink-muted); max-width:460px; margin:0 auto var(--sp-lg); }
+
+  /* ---------- footer ---------- */
+  footer{ background:var(--canvas-deep); color:var(--ink-muted); padding:64px 32px 32px; border-top:1px solid var(--hairline-soft); }
+  .footer-grid{ display:grid; grid-template-columns:1fr; gap:var(--sp-xl); max-width:1180px; margin:0 auto; }
+  @media(min-width:640px){ .footer-grid{ grid-template-columns:1.4fr 1fr 1fr; } }
+  @media(min-width:900px){ .footer-grid{ grid-template-columns:1.4fr 1fr 1fr 1fr; } }
+  .footer-brand p{ font-size:13px; line-height:1.4; max-width:280px; margin-top:var(--sp-xs); }
+  .footer-col h5{ font-size:13px; font-weight:600; letter-spacing:-0.1px; margin-bottom:var(--sp-sm); color:var(--ink); }
+  .footer-col a{ display:block; font-size:13px; letter-spacing:-0.1px; line-height:2.1; color:var(--ink-muted); }
+  .footer-col a:hover{ color:var(--ink); }
+  .footer-legal{ max-width:1180px; margin:var(--sp-xl) auto 0; padding-top:var(--sp-lg); border-top:1px solid var(--hairline-soft); font-size:12px; color:var(--ink-faint); }
+
+  /* ---------- mobile footer (<768px only) ----------
+     Replaces the desktop 4-column .footer-grid with a compact stack: brand
+     + one-line description, then a 2-column link grid (Terms/Privacy,
+     Refund Policy/Contact, Manage Membership/Open in Whop), then the
+     copyright line. Desktop's .footer-grid is untouched and simply hidden
+     here; .footer-mobile is hidden by default and only shown <768px. Extra
+     bottom padding on <footer> at this breakpoint keeps the fixed Chatbase
+     bubble (bottom-right, third-party, not something this file positions)
+     from sitting on top of the last row of links. */
+  .footer-mobile{ display:none; }
+  @media(max-width:768px){
+    .footer-grid{ display:none; }
+    footer{ padding:36px 24px calc(32px + 84px); }
+    .footer-mobile{ display:block; max-width:1180px; margin:0 auto; }
+    .footer-mobile-brand p{ font-size:13px; line-height:1.45; color:var(--ink-muted); margin-top:6px; max-width:320px; }
+    .footer-mobile-links{ display:grid; grid-template-columns:1fr 1fr; gap:10px 20px; margin-top:var(--sp-lg); }
+    .footer-mobile-links a{ font-size:13px; letter-spacing:-0.1px; color:var(--ink-muted); }
+    .footer-mobile-links a:hover{ color:var(--ink); }
+    .footer-legal{ margin-top:var(--sp-lg); padding-top:var(--sp-md); }
+  }
+  /* ---------- CHECKOUT MODAL (on-site Whop embedded checkout) ----------
+     Triggered by any .js-open-checkout element or the pricing card's CTA
+     when it's in Membership mode (checked live, since that CTA's href
+     also serves the 1:1 coaching state). Payment happens in-place, no
+     redirect to whop.com, matching the rest of the site's dark/blue UI. */
+  /* checkout-modal-open uses an inline position:fixed on body (set in JS,
+     with the pre-scroll offset preserved as top:-Ypx) rather than relying
+     on overflow:hidden alone — iOS Safari ignores overflow:hidden on body
+     and lets the page scroll underneath a fixed overlay anyway, which was
+     dragging the sticky header out of view and making the close button
+     hard to find. The fixed-position trick is the standard cross-browser
+     fix; overflow:hidden stays too as a harmless backup for browsers that
+     don't need the workaround. */
+  body.checkout-modal-open{ overflow:hidden; width:100%; }
+  .checkout-modal-overlay{
+    position:fixed; inset:0; z-index:1000;
+    background:rgba(0,0,0,0.72); backdrop-filter:blur(6px);
+    opacity:0; pointer-events:none; touch-action:none;
+    /* visibility:hidden (delayed on close, instant on open) fully removes
+       this from the paint tree once closed, rather than just fading its
+       opacity to 0. iOS Safari's automatic toolbar/safe-area chrome-color
+       matching appears to sample from whatever's still part of the render
+       tree near the bottom of the page, not the true on-screen pixels —
+       after opening and closing the checkout drawer once, it was picking up
+       this overlay/the modal's own dark grey surface color instead of the
+       page's real black, leaving a stray grey bar under the toolbar even
+       though nothing was visibly on screen. Fully removing both from paint
+       when closed is what actually fixes that, not just hiding them visually. */
+    visibility:hidden;
+    transition:opacity .25s ease, visibility 0s linear .25s;
+  }
+  .checkout-modal-overlay.is-open{ opacity:1; pointer-events:auto; visibility:visible; transition:opacity .25s ease; }
+  .checkout-modal{
+    position:fixed; left:50%; bottom:0; z-index:1001;
+    width:100%; max-width:460px; max-height:85vh; overflow-y:auto;
+    -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
+    background:var(--surface-1); border:1px solid var(--hairline);
+    border-radius:var(--r-hero) var(--r-hero) 0 0;
+    /* No box-shadow here: this element sits at display:block at all times
+       (only moved off-screen via transform + visibility below), and a
+       fixed-position element's box-shadow is never clipped by that transform.
+       With the shadow on the base rule it painted a permanent blue glow at
+       the bottom of every page, fixed to the viewport, even while "closed" —
+       the glow only belongs on the .is-open state below. */
+    padding-bottom:env(safe-area-inset-bottom, 0px);
+    transform:translate(-50%, 100%);
+    /* Same visibility:hidden reasoning as the overlay above: delayed on
+       close so the slide-down animation still plays first, instant on open
+       (see .is-open below) so it appears the moment the animation starts. */
+    visibility:hidden;
+    transition:transform .32s cubic-bezier(.4,0,.2,1), box-shadow .32s ease, visibility 0s linear .32s;
+  }
+  @supports (max-height: 85dvh){ .checkout-modal{ max-height:85dvh; } }
+  .checkout-modal.is-open{
+    transform:translate(-50%, 0); box-shadow:0 -20px 60px -20px rgba(10,99,255,0.35);
+    visibility:visible; transition:transform .32s cubic-bezier(.4,0,.2,1), box-shadow .32s ease;
+  }
+  @media(min-width:640px){
+    .checkout-modal{
+      bottom:auto; top:50%; border-radius:var(--r-hero);
+      transform:translate(-50%, -46%); opacity:0;
+      transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s ease, visibility 0s linear .3s;
+    }
+    .checkout-modal.is-open{ transform:translate(-50%, -50%); opacity:1; visibility:visible; transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s ease; }
+  }
+  .checkout-modal-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 16px; border-bottom:1px solid var(--hairline-soft);
+    position:sticky; top:0; background:var(--surface-1); z-index:2;
+    box-shadow:0 8px 16px -8px rgba(0,0,0,0.5);
+  }
+  .checkout-modal-header .brand-mini{ display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:var(--ink); }
+  .checkout-modal-header .brand-mini img{ width:20px; height:20px; object-fit:contain; }
+  .checkout-modal-close{
+    width:36px; height:36px; border-radius:50%; background:var(--surface-2);
+    border:1px solid var(--hairline);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--ink); font-size:17px; line-height:1; flex-shrink:0;
+  }
+  .checkout-modal-close:hover{ background:var(--surface-3); }
+  .checkout-modal-body{ min-height:420px; }
+  .checkout-modal-loading{ padding:80px 20px; text-align:center; color:var(--ink-faint); font-size:13px; }
+
+  /* ---------- checkout skeleton: shown while the Whop iframe is loading,
+     shaped like the real form (summary/price, email, card, expiry+cvc,
+     pay button) instead of a bare "Loading…" line, so the wait reads as
+     "assembling" rather than frozen. Built + removed by JS in the checkout
+     script below (auto-removes itself via MutationObserver the instant
+     Whop injects real content, whether that happens during an early
+     background prefetch or right after the user taps Join). ---------- */
+  .checkout-skeleton{ padding:26px 2px 4px; }
+  /* Small, understated stat line above the skeleton bars — reassurance
+     during the wait without turning the payment screen into a marketing
+     slide. Counts up once (see script below), same count-up pattern as the
+     hero's own "Views Generated" stat, so it feels like part of the same
+     site rather than a bolted-on extra. */
+  /* Deliberately small and muted — a quiet caption-style line (matching the
+     site's existing .stat-line pattern used elsewhere), not a restatement
+     of the big bold hero stat treatment. That larger styling read as a
+     separate banner sitting on top of the form rather than part of the
+     loading state. */
+  .checkout-skeleton-stat{
+    text-align:center; margin:0 0 20px;
+    font-family:var(--font-mobile-body); font-size:14.5px; color:var(--ink-faint);
+  }
+  .checkout-skeleton-stat .cs-v{ color:var(--ink-muted); font-weight:600; }
+  .checkout-skeleton .sk-label{ width:34%; height:10px; border-radius:5px; margin-bottom:8px; }
+  .checkout-skeleton .sk-price{ height:54px; border-radius:var(--r-md); margin-bottom:22px; }
+  .checkout-skeleton .sk-field{ height:44px; border-radius:var(--r-md); margin-bottom:16px; }
+  .checkout-skeleton .sk-split{ display:flex; gap:10px; margin-bottom:16px; }
+  .checkout-skeleton .sk-split .sk-field{ flex:1; margin-bottom:0; }
+  .checkout-skeleton .sk-button{ height:46px; border-radius:var(--r-pill); margin-top:6px; }
+  .checkout-skeleton .sk-label, .checkout-skeleton .sk-price,
+  .checkout-skeleton .sk-field, .checkout-skeleton .sk-button{
+    position:relative; overflow:hidden; background:var(--surface-2);
+  }
+  .checkout-skeleton .sk-label::after, .checkout-skeleton .sk-price::after,
+  .checkout-skeleton .sk-field::after, .checkout-skeleton .sk-button::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent);
+    transform:translateX(-100%);
+    animation:hsmSkeletonShimmer 1.6s ease-in-out infinite;
+  }
+  @keyframes hsmSkeletonShimmer{ to{ transform:translateX(100%); } }
+  @media(prefers-reduced-motion:reduce){
+    .checkout-skeleton .sk-label::after, .checkout-skeleton .sk-price::after,
+    .checkout-skeleton .sk-field::after, .checkout-skeleton .sk-button::after{ display:none; }
+  }
+  .checkout-modal-success{ padding:56px 24px 48px; text-align:center; }
+  .checkout-modal-success .ok{ width:72px; height:72px; margin:0 auto 22px; }
+  .checkout-modal-success .ok svg{ width:100%; height:100%; overflow:visible; }
+  .checkout-modal-success .ok-check-circle{ stroke:var(--success); stroke-width:2.5; fill:none; stroke-dasharray:151; stroke-dashoffset:151; animation:hsmOkCircle .5s ease-out forwards; }
+  .checkout-modal-success .ok-check-mark{ stroke:var(--success); stroke-width:3.5; fill:none; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:36; stroke-dashoffset:36; animation:hsmOkMark .35s .45s ease-out forwards; }
+  @keyframes hsmOkCircle{ to{ stroke-dashoffset:0; } }
+  @keyframes hsmOkMark{ to{ stroke-dashoffset:0; } }
+  @keyframes hsmOkFadeUp{ from{ opacity:0; transform:translateY(6px); } to{ opacity:1; transform:translateY(0); } }
+  .checkout-modal-success h4{ font-size:21px; font-weight:700; letter-spacing:-0.2px; margin-bottom:8px; opacity:0; animation:hsmOkFadeUp .4s .75s ease-out forwards; }
+  .checkout-modal-success p{ color:var(--ink-muted); font-size:14px; line-height:1.5; margin:0 auto 26px; max-width:300px; opacity:0; animation:hsmOkFadeUp .4s .85s ease-out forwards; }
+  .checkout-modal-success .checkout-success-cta{ opacity:0; animation:hsmOkFadeUp .4s 1s ease-out forwards; }
+  .checkout-modal-success .checkout-success-cta:active{ transform:scale(0.97); }
+  /* success-cta-wrap and .email-note only exist for the <768px redesign
+     below. On desktop, display:contents makes the wrapper invisible to
+     layout (button behaves as if it were still a direct child, exactly
+     as before), and the note itself is hidden — restoring desktop to its
+     original icon/headline/paragraph/button-only appearance untouched. */
+  @media(min-width:769px){
+    .success-cta-wrap{ display:contents; }
+    .checkout-modal-success .email-note{ display:none; }
+  }
+  @media(prefers-reduced-motion:reduce){
+    .checkout-modal{ transition:none; }
+    .checkout-modal-overlay{ transition:none; }
+    .checkout-modal-success .ok-check-circle,
+    .checkout-modal-success .ok-check-mark{ animation:none; stroke-dashoffset:0; }
+    .checkout-modal-success h4,
+    .checkout-modal-success p,
+    .checkout-modal-success .checkout-success-cta{ animation:none; opacity:1; transform:none; }
+  }
+  /* MOBILE CHECKOUT SUCCESS STATE REDESIGN — scoped to <768px only, per spec.
+     Desktop keeps the original green check + roomier spacing untouched;
+     everything below is an override layer, not a replacement of the base
+     rules above. Typography/colour/radius tokens are all pulled from the
+     site's existing variables (--ink, --ink-muted, --surface-2, --hairline,
+     --r-md, --accent-blue) rather than inventing new ones. */
+  @media(max-width:768px){
+    .checkout-modal-header{ padding:11px 16px; }
+    .checkout-modal-header .brand-mini img{ width:18px; height:18px; }
+    .checkout-modal-close{ width:50px; height:50px; font-size:16px; }
+    .checkout-modal-success{ padding:38px 24px 34px; }
+    .checkout-modal-success .ok{ width:68px; height:68px; margin:0 auto 24px; position:relative; }
+    /* Tight glow hugging the ring itself (drop-shadow on the SVG) rather
+       than a wide soft blob sitting behind it — matches the approved
+       mock-up's more restrained halo. */
+    .checkout-modal-success .ok svg{
+      position:relative;
+      filter:
+        drop-shadow(0 0 5px rgba(10,99,255,0.75))
+        drop-shadow(0 0 12px rgba(10,99,255,0.4));
+    }
+    .checkout-modal-success .ok-check-circle{ stroke:#ffffff; stroke-opacity:0.92; stroke-width:1.75; }
+    .checkout-modal-success .ok-check-mark{ stroke:#ffffff; stroke-width:2.75; }
+    .checkout-modal-success h4{ font-size:19px; margin-bottom:16px; }
+    .checkout-modal-success p{ margin:0 auto 32px; max-width:280px; }
+    /* success-cta-wrap sizes the button off the email-note's own natural
+       text width (its widest child) via flex column + stretch, so the
+       button reads as "just a bit longer than the text underneath" on
+       whatever device renders it — no hardcoded px guess needed. The
+       wrap's own small side padding is what gives the button that little
+       bit of extra length past the note. Colour reverted to the site's
+       existing white/black primary-button treatment (inherited from
+       .btn-primary), matching every other CTA on the page. */
+    .success-cta-wrap{
+      display:inline-flex; flex-direction:column; align-items:stretch;
+      margin:0 auto; padding:0 14px;
+    }
+    .checkout-modal-success .checkout-success-cta{
+      width:auto; height:54px; padding:0 20px;
+      border-radius:var(--r-md); margin-bottom:16px;
+    }
+    .checkout-modal-success .email-note{
+      display:block; color:var(--ink-muted); font-size:12.5px;
+      text-align:center;
+      opacity:0; animation:hsmOkFadeUp .4s 1.1s ease-out forwards;
+    }
+  }
+  @media(max-width:768px) and (prefers-reduced-motion:reduce){
+    .checkout-modal-success .email-note{ animation:none; opacity:1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top-nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><span class="mark"><img src="hsm-logo-new.png" alt="High Status Method"></span><span class="word">High <span class="word-rest">Status Method</span></span><span class="word word-mobile">High Status Method</span><img class="brand-signature" src="by-nish-logo-cropped.png" alt="By Nish"></a>
+    <nav>
+      <a href="#membership">Method</a>
+      <a href="#ask">AI Coach</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="actions">
+      <a class="btn btn-secondary t-button js-open-checkout" data-cta="nav_join" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Join</a>
+      <!-- Mobile-only hamburger (display:none above 768px): reveals the
+           same four nav links above, which have no other mobile entry
+           point below the desktop nav's own 860px breakpoint. -->
+      <button type="button" class="hsm-nav-toggle" id="hsmNavToggle" aria-expanded="false" aria-controls="hsmMobileNav" aria-label="Open menu">
+        <span class="hsm-nav-toggle-bar"></span>
+        <span class="hsm-nav-toggle-bar"></span>
+        <span class="hsm-nav-toggle-bar"></span>
+      </button>
+    </div>
+  </div>
+  <nav class="hsm-mobile-nav" id="hsmMobileNav">
+    <a href="#membership">Method</a>
+    <a href="#ask">AI Coach</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="t-display-xxl">Create <span class="hl-rest">Content That Shapes Your Perception</span></h1>
+      <p class="t-body-lg sub">Learn the psychology, camera techniques, editing systems and branding principles behind high-status content. Get access to Nish AI, my weekly music pics, algorithm updates and content reviews.</p>
+
+      <div class="hero-stats">
+        <div class="stat"><span class="num">50M+</span><span class="lbl">Views Generated</span></div>
+        <span class="stat-dot">·</span>
+        <div class="stat"><span class="num">50K+</span><span class="lbl">Followers Built</span></div>
+        <span class="stat-dot">·</span>
+        <div class="stat"><span class="num">10+</span><span class="lbl">Years Experience</span></div>
+        <span class="stat-dot">·</span>
+        <div class="stat"><span class="num">9 Figure</span><span class="lbl">Founders Worked With</span></div>
+      </div>
+
+      <div class="hero-ctas">
+        <a class="btn btn-primary t-button js-open-checkout" data-cta="hero_join" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Join High Status Method</a>
+        <a class="btn btn-secondary t-button" href="#membership">See what's inside</a>
+      </div>
+
+      <!-- Mobile-only supporting text (replaces the .sub paragraph on mobile;
+           desktop keeps that paragraph untouched, this block is display:none
+           above 768px). -->
+      <div class="hero-mobile-support">
+        <p class="hero-mobile-line1">Everything behind content that commands attention, engineered into one system.</p>
+        <p class="hero-mobile-line2">Nish AI &middot; Viral Editing Systems &middot; Brand Architecture &middot; Music + Algorithm Intelligence</p>
+      </div>
+    </div>
+
+    <!-- Mobile-only divider above the Reel showcase (display:none above 768px) -->
+    <div class="hero-divider"></div>
+
+    <!-- HSM REEL FILMSTRIP. .hsm-reel-panel is a no-op wrapper on desktop
+         (display:contents, produces no box of its own) and becomes a plain,
+         undecorated full-width band only inside the mobile breakpoint, so
+         desktop's unframed filmstrip is completely unaffected. -->
+    <div class="hsm-reel-panel">
+      <div class="hsm-filmstrip-wrap" id="hsmFilmstripWrap">
+        <div class="hsm-filmstrip-row hsm-filmstrip-row-one">
+          <div class="hsm-filmstrip-track" id="hsmTrackOne"></div>
+        </div>
+        <div class="hsm-filmstrip-row hsm-filmstrip-row-two">
+          <div class="hsm-filmstrip-track" id="hsmTrackTwo"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile-only divider below the Reel showcase (display:none above 768px) -->
+    <div class="hero-divider"></div>
+
+    <!-- Mobile-only single-row metrics (display:none above 768px; desktop's
+         own .hero-stats block above is untouched and keeps rendering on
+         desktop as before). Same four real values/labels, not duplicated
+         content, just relocated for the mobile layout order. -->
+    <div class="hero-metrics-mobile" id="hsmMetricsMobile">
+      <div class="metric" data-target="50000000" data-format="M"><span class="v">50M+</span><span class="l">Views Generated</span></div>
+      <div class="metric" data-target="50000" data-format="K"><span class="v">50K+</span><span class="l">Followers Built</span></div>
+      <div class="metric"><span class="v">10+</span><span class="l">Years Experience</span></div>
+      <div class="metric"><span class="v">9 Figure</span><span class="l">Founders Worked With</span></div>
+    </div>
+    <noscript><style>.hero-metrics-mobile .metric{ opacity:1!important; transform:none!important; }</style></noscript>
+  </section>
+
+  <!-- ASK NISH AI: its own dedicated section, moved out of the hero -->
+  <section class="section" id="ask" style="padding-top:64px;">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="t-caption eyebrow">Live AI</div>
+        <h2 class="t-display-lg">Ask Nish AI anything.</h2>
+        <p class="t-body-lg">Real coaching answers trained exclusively on 100+ hours of my coaching calls, creative decisions, frameworks and principles.</p>
+      </div>
+
+      <div class="hero-glow">
+        <div class="ask-panel">
+          <div class="ask-topbar">
+            <div class="chat-select">New Question <span>⌄</span></div>
+            <div class="chat-add">+</div>
+          </div>
+          <div class="ask-row">
+            <textarea id="chatInput" rows="2" placeholder="Ask Nish AI about camera, editing, or personal branding…"></textarea>
+            <span class="ask-cursor" id="askCursor" aria-hidden="true"></span>
+          </div>
+          <div class="ask-bottom-row">
+            <div class="model-tag">Nish AI <span>· Model 2.6 ⌄</span></div>
+            <button class="ask-send" id="chatSend" aria-label="Send">
+              <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <p class="ask-note ask-note-top">Type a question above or tap a topic to start.</p>
+      <div class="chip-row" id="chatSuggestions">
+        <span class="btn btn-translucent t-caption chip" style="text-transform:none; font-weight:500;" data-q="How do I frame a shot for the best camera angle?">Camera framing</span>
+        <span class="btn btn-translucent t-caption chip" style="text-transform:none; font-weight:500;" data-q="What music fits a slow cinematic shot?">Sound matching</span>
+        <span class="btn btn-translucent t-caption chip" style="text-transform:none; font-weight:500;" data-q="How do I start building a personal brand?">Personal branding</span>
+      </div>
+      <p class="ask-note ask-note-limit">2 free questions per hour · <a class="hyperlink js-open-checkout" data-cta="chat_limit_join" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Join for unlimited</a></p>
+    </div>
+  </section>
+
+  <!-- INSIDE THE MEMBERSHIP -->
+  <section class="section" id="membership">
+    <div class="wrap">
+      <div class="section-head center">
+        <div class="t-caption eyebrow">Inside The Membership</div>
+        <h2 class="t-display-lg">The complete content system.<br>Updated every week.</h2>
+        <p class="t-body-lg">Learn how to shoot and edit. See which music, formats and strategies are working now. Submit your work for feedback and access every resource I release.</p>
+      </div>
+
+      <div class="pillar-list">
+
+        <!-- 01 NISH AI -->
+        <div class="pillar-row">
+          <div class="pillar-q">
+            <div class="pillar-num">01</div>
+            <div class="pillar-head">
+              <div class="badge-row">
+                <h3>Nish AI</h3>
+                <span class="real-badge"><span class="rp-dot"></span>Live now</span>
+              </div>
+              <p class="hook">Your always-on AI coach, trained on the real thing.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Nish AI is trained exclusively on 100+ hours of my coaching calls, creative decisions, frameworks and principles: camera technique, editing philosophy and personal branding. Never generic internet advice, and it's on call whenever you get stuck.</p>
+              <ul class="check-list cols-2">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Trained on 100+ hours of real coaching</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera and editing guidance</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Personal branding advice</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Answers 24/7, no waiting</li>
+              </ul>
+              <a class="hyperlink t-body-sm pillar-cta" id="askNishLink" href="#ask">Try it live — ask Nish AI a question →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02 CAMERA LAB -->
+        <div class="pillar-row">
+          <div class="pillar-q">
+            <div class="pillar-num">02</div>
+            <div class="pillar-head">
+              <h3>Camera Lab</h3>
+              <p class="hook">Know exactly what to shoot and how to shoot it.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Camera settings, framing, lighting, angles, movement and shot selection. Learn how to make stronger images with a professional camera or the phone already in your pocket.</p>
+              <ul class="check-list cols-2">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera settings</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Framing and composition</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Lighting setups</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Angles and perspective</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera movement</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Shot selection</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>iPhone shooting</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Low-light shooting</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Building a shot sequence</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03 EDITING SYSTEMS -->
+        <div class="pillar-row">
+          <div class="pillar-q">
+            <div class="pillar-num">03</div>
+            <div class="pillar-head">
+              <h3>Editing Systems</h3>
+              <p class="hook">Create edits that go viral.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Learn how to create hooks, control pacing, cut to music, build seamless transitions and design loops that naturally increase retention and rewatches.</p>
+              <ul class="check-list cols-2">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Visual and audio hooks</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>High-retention pacing</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Transitions and cuts</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Seamless loops</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Music synchronisation</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Sound design</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Colour grading</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Building tension and reveals</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Structuring short-form stories</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Finishing and export</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04 WEEKLY INTELLIGENCE — flagship -->
+        <div class="pillar-row flagship">
+          <div class="pillar-q">
+            <div class="pillar-num">04</div>
+            <div class="pillar-head">
+              <div class="badge-row">
+                <h3>Weekly Intelligence</h3>
+                <span class="real-badge"><span class="rp-dot"></span>Updated weekly</span>
+              </div>
+              <p class="hook">The decisions behind what I'm posting now.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Every week, I share the music, platform changes, creative patterns and posting strategies influencing my own content. You see what I'm testing, what is working and what I would avoid.</p>
+              <div class="intel-grid">
+                <div class="intel-card">
+                  <h4>Music Picks</h4>
+                  <p>Songs I believe have creative potential before they become exhausted, with where to start the track and how I'd structure the edit.</p>
+                  <ul class="check-list compact">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Track and artist</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Starting point</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mood</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Suitable footage</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Editing direction</li>
+                  </ul>
+                </div>
+                <div class="intel-card">
+                  <h4>Algorithm Notes</h4>
+                  <p>Practical observations about reach, distribution and platform behaviour, based on what I'm seeing across my own content.</p>
+                  <ul class="check-list compact">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Posting-time data</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Format performance</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Retention changes</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Platform updates</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Tests in progress</li>
+                  </ul>
+                </div>
+                <div class="intel-card">
+                  <h4>Reel Breakdowns</h4>
+                  <p>Detailed breakdowns of my strongest and weakest posts: the hook, music, pacing and what I'd change.</p>
+                  <ul class="check-list compact">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>My successful Reels</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>My underperforming Reels</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>What worked</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>What weakened it</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>The lesson to take away</li>
+                  </ul>
+                </div>
+                <div class="intel-card">
+                  <h4>Opportunities</h4>
+                  <p>Formats, sounds and creative opportunities worth acting on while they still have room to move.</p>
+                  <ul class="check-list compact">
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Emerging formats</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Relevant trends</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>New editing patterns</li>
+                    <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Worth testing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05 CONTENT REVIEWS -->
+        <div class="pillar-row">
+          <div class="pillar-q">
+            <div class="pillar-num">05</div>
+            <div class="pillar-head">
+              <h3>Content Reviews</h3>
+              <p class="hook">Submit your content. Get direct feedback from me.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Upload a Reel and receive practical feedback on the concept, opening shot, music, pacing, framing, editing and overall perception.</p>
+              <div class="review-glow-wrap">
+                <div class="review-panel">
+                  <div class="rp-head"><span class="rp-title">Example feedback</span><span class="rp-tag">Sample</span></div>
+                  <div class="review-comment"><span class="ts">00:01</span><span class="cm">Opening shot needs more scale</span></div>
+                  <div class="review-comment"><span class="ts">00:04</span><span class="cm">Hold this frame for another beat</span></div>
+                  <div class="review-comment"><span class="ts">00:07</span><span class="cm">Remove this transition</span></div>
+                  <div class="review-comment"><span class="ts">00:10</span><span class="cm">Start the reveal on the music change</span></div>
+                  <p class="review-verdict"><b>3 priority changes</b> · revised direction included</p>
+                </div>
+              </div>
+              <ul class="check-list cols-2">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Timestamped comments</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Review status</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Summary verdict</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Revised direction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06 RESOURCE VAULT -->
+        <div class="pillar-row">
+          <div class="pillar-q">
+            <div class="pillar-num">06</div>
+            <div class="pillar-head">
+              <h3>Resource Vault</h3>
+              <p class="hook">Every tool, guide and asset I release.</p>
+            </div>
+            <span class="pillar-icon">+</span>
+          </div>
+          <div class="pillar-body">
+            <div class="pillar-body-inner">
+              <p class="pillar-desc">Access my camera shot guides, music guides, Master of Perception eBook, editing resources, dark aesthetic presets and every new resource added to the membership.</p>
+              <ul class="check-list cols-2">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera shot guides</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Music guides</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Master of Perception</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Dark aesthetic presets</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Editing templates</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera settings</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Content frameworks</li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Future resource drops</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="membership-cta">
+        <a class="btn btn-primary t-button js-open-checkout" data-cta="get_access_now" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Get Access Now</a>
+        <p class="price-line"><a href="#pricing" style="color:var(--ink-muted); text-decoration:underline; text-underline-offset:2px;">See full pricing &amp; plan details ↓</a></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CREDIBILITY LIST -->
+  <section class="section" id="why-it-works" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="t-caption eyebrow">Why It Works</div>
+        <h2 class="t-display-md">Built from a decade of doing the work.</h2>
+        <p class="t-body-lg" style="color:var(--ink-muted); margin-top:var(--sp-sm);">Everything inside High Status Method comes from the systems I use to create content, grow audiences and advise high-level founders.</p>
+      </div>
+      <div class="cred-list">
+        <div class="cred-row"><span class="n">01</span><p>A decade spent testing what actually works in content, branding and audience growth, not theorizing about it.</p></div>
+        <div class="cred-row"><span class="n">02</span><p>Generated 50 million+ organic views through cinematic luxury, lifestyle, and travel content.</p></div>
+        <div class="cred-row"><span class="n">03</span><p>Developed content and personal-brand strategies for nine-figure entrepreneurs and high-profile founders.</p></div>
+        <div class="cred-row"><span class="n">04</span><p>Applied that system to luxury content across Australia, Dubai, Europe, and Asia, from villas to private aviation.</p></div>
+        <div class="cred-row"><span class="n">05</span><p>Built an engaged audience through a distinctive creative identity, not borrowed formats or trend-chasing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="section" id="pricing">
+    <div class="wrap pricing-desktop">
+      <div class="section-head center">
+        <div class="t-caption eyebrow">Pricing</div>
+        <h2 class="t-display-md">One plan. Everything included.</h2>
+      </div>
+      <div class="price-glow-wrap">
+      <div class="price-wrap">
+        <div class="price-card">
+          <div class="plan-brand">
+            <img src="hsm-logo-new.png" alt="" class="plan-logo">
+            <span class="plan-name">High Status Method</span>
+          </div>
+
+          <div class="price-toggle is-membership" id="priceToggle">
+            <button type="button" id="toggleCoaching">1:1 coaching</button>
+            <button type="button" class="active" id="toggleMembership">Membership</button>
+            <div class="toggle-thumb"></div>
+          </div>
+
+          <div class="amt-wrap">
+            <div class="amt" id="amtCoaching"><span class="n">$10,000</span></div>
+            <div class="amt active" id="amtMembership"><span class="n">$99</span><span class="per">/ month</span></div>
+          </div>
+          <div class="price-anchor" id="priceSub">$3.30/day</div>
+
+          <div class="price-list-label" id="priceListLabel">Everything in the membership, plus</div>
+
+          <div class="price-list-wrap">
+            <ul class="price-list" id="listCoaching">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Complete personal brand strategy and positioning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom content pillars built around your identity</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>High-status visual identity and creative direction</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Viral content strategy, storytelling and editing systems</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct reviews and feedback on your content</li>
+            </ul>
+            <ul class="price-list active" id="listMembership">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited access to Nish AI</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera and editing systems</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Weekly music and algorithm intelligence</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct content reviews</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Complete resource vault</li>
+            </ul>
+          </div>
+
+          <a class="btn btn-primary t-button" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener" id="priceCta" data-cta="pricing_card_desktop">Get full access</a>
+          <div class="price-fine" id="priceFine">Instant access · Cancel anytime</div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="wrap pricing-mobile">
+      <div class="section-head center">
+        <div class="t-caption eyebrow">Pricing</div>
+        <h2 class="t-display-md">Two ways to work together.</h2>
+        <p class="t-body" style="color:var(--ink-muted); margin-top:var(--sp-sm);">Choose full membership access or work with me directly.</p>
+      </div>
+      <div class="price-glow-wrap">
+      <div class="price-wrap">
+        <div class="price-card">
+          <div class="plan-brand">
+            <img src="hsm-logo-new.png" alt="" class="plan-logo">
+            <span class="plan-name">High Status Method</span>
+          </div>
+
+          <div class="price-toggle mtoggle" id="mPriceToggle" role="group" aria-label="Choose how you want to work with Nish">
+            <button type="button" class="active" id="mToggleMembership" aria-pressed="true">Membership</button>
+            <button type="button" id="mToggleCoaching" aria-pressed="false">1:1 coaching</button>
+            <div class="toggle-thumb"></div>
+          </div>
+
+          <div class="amt-wrap">
+            <div class="amt active" id="mAmtMembership"><span class="n">$99</span><span class="per">/ month</span></div>
+            <div class="amt" id="mAmtCoaching"><span class="n">$10,000</span></div>
+          </div>
+          <div class="price-anchor" id="mPriceSub">$3.30/day</div>
+
+          <div class="price-list-label" id="mPriceListLabel" aria-hidden="true">Everything in the membership, plus</div>
+
+          <div class="price-list-wrap" id="mPriceListWrap">
+            <ul class="price-list active" id="mListMembership">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Unlimited access to Nish AI</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Camera and editing systems</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Weekly music and algorithm intelligence</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct content reviews</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Complete resource vault</li>
+            </ul>
+            <ul class="price-list" id="mListCoaching">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Complete personal brand strategy and positioning</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom content pillars built around your identity</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>High-status visual identity and creative direction</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Private strategy calls with Nish</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Direct content reviews and ongoing feedback</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Full High Status Method membership access</li>
+            </ul>
+          </div>
+
+          <a class="btn btn-primary t-button" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener" id="mPriceCta" data-cta="pricing_card_mobile">Get full access</a>
+          <div class="price-fine" id="mPriceFine">Instant access · Cancel anytime</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="t-caption eyebrow">FAQ</div>
+        <h2 class="t-display-md">Questions, answered.</h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-1" id="faq-q-1">
+            <p>Is this a course or an ongoing membership?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><p>High Status Method is an ongoing membership. The tutorials give you the foundation, while Weekly Intelligence, content reviews, new resources and updated creative guidance keep you current.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-2" id="faq-q-2">
+            <p>Who is High Status Method for?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><p>High Status Method is for creators, founders and personal brands who want to produce stronger content and shape how they are perceived online. You can join whether you are creating your first videos or already publishing consistently.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-3" id="faq-q-3">
+            <p>Can I do this with just my iPhone?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><p>Yes. Camera Lab is focused on creating better content with your iPhone. You will learn how to capture stronger B-roll, take better photos, choose more effective angles and produce higher-quality content using the phone you already have.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-4" id="faq-q-4">
+            <p>How is Nish AI different from ChatGPT?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><p>Nish AI draws from more than 100 hours of my coaching calls, frameworks, creative decisions and resources. Its answers are grounded in the same principles and methods taught throughout High Status Method.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-5" id="faq-q-5">
+            <p>How do content reviews work?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><p>Submit your Reel inside the membership and I will review the concept, opening shot, music, pacing, framing, editing and overall perception. You will receive practical feedback showing what to change and how to strengthen the video.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-6" id="faq-q-6">
+            <p>How often is new content added?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-6" role="region" aria-labelledby="faq-q-6"><p>The membership is updated every week with new music selections, algorithm observations, Reel breakdowns, creative opportunities and evolving strategies. New guides, presets and resources are also added as they are released.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-7" id="faq-q-7">
+            <p>How do I access the membership after joining?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-7" role="region" aria-labelledby="faq-q-7"><p>Complete checkout using your preferred email address. Your receipt and access details will be sent to that email, and you will use the same address to access High Status Method through Whop.</p></div>
+        </div>
+        <div class="faq-row">
+          <button type="button" class="faq-q" aria-expanded="false" aria-controls="faq-a-8" id="faq-q-8">
+            <p>Can I cancel anytime?</p><span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a" id="faq-a-8" role="region" aria-labelledby="faq-q-8"><p>Yes. High Status Method is a month-to-month membership with no long-term contract. You can manage or cancel your membership through your Whop account.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2 class="t-display-lg">Learn the 1% details that change how your brand is perceived.</h2>
+      <p class="t-body-lg">Join High Status Method for $99/month and get instant access to Nish AI, the complete membership, weekly intelligence, content reviews and every current resource.</p>
+      <a class="btn btn-primary t-button js-open-checkout" data-cta="final_cta_join" href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Join High Status Method</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand"><span class="mark"><img src="hsm-logo-new.png" alt=""></span><span class="word">High Status Method</span></div>
+      <p>A coaching system for building a high-status personal brand through content, camera technique, and editing philosophy.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Navigation</h5>
+      <a href="#membership">Method</a>
+      <a href="#ask">AI Coach</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h5>Join</h5>
+      <a href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">High Status Method on Whop</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal & Support</h5>
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/refund-policy.html">Refund Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://whop.com/hub/memberships" target="_blank" rel="noopener">Manage Membership</a>
+    </div>
+  </div>
+
+  <!-- Mobile-only compact footer (<768px). See .footer-mobile CSS above. -->
+  <div class="footer-mobile">
+    <div class="footer-mobile-brand">
+      <div class="brand"><span class="mark"><img src="hsm-logo-new.png" alt=""></span><span class="word">High Status Method</span></div>
+      <p>A membership for creating better content and building a stronger personal brand.</p>
+    </div>
+    <div class="footer-mobile-links">
+      <a href="/terms.html">Terms</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/refund-policy.html">Refund Policy</a>
+      <a href="/contact.html">Contact</a>
+      <a href="https://whop.com/hub/memberships" target="_blank" rel="noopener">Manage Membership</a>
+      <a href="https://whop.com/joined/high-status-method/products/membership-ba-4150/" target="_blank" rel="noopener">Open in Whop</a>
+    </div>
+  </div>
+
+  <div class="footer-legal">© 2026 High Status Method. All rights reserved.</div>
+</footer>
+<!-- CHECKOUT MODAL: mounts the real Whop embedded checkout in-place when a
+     Join / Get full access CTA is clicked, so payment happens on this page
+     instead of redirecting to whop.com. The plan id below is the live
+     Membership plan ($99/mo) — see the script block near the end of the
+     file for the mount/open/close logic. -->
+<div class="checkout-modal-overlay" id="checkoutOverlay"></div>
+<div class="checkout-modal" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Join High Status Method checkout">
+  <div class="checkout-modal-header">
+    <div class="brand-mini"><img src="hsm-logo-new.png" alt="">High Status Method</div>
+    <button type="button" class="checkout-modal-close" id="checkoutModalCloseBtn" aria-label="Close">✕</button>
+  </div>
+  <div class="checkout-modal-body" id="checkoutModalBody">
+    <div class="checkout-modal-loading">Loading checkout…</div>
+  </div>
+</div>
+
+<!-- Chatbase: live Nish AI widget (agent: 5HiDyGuOII5zqPOuFQTp1). Rate-limited server-side to 2 messages/hour per device in Chatbase settings. -->
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="5HiDyGuOII5zqPOuFQTp1";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+<!-- Mobile-only: keep the Chatbase bubble out of the way of the hero, and
+     keep the auto-popup greeting bubble off entirely. #chatbase-bubble-button
+     (the round launcher) is hidden while the hero (through the image strip)
+     is in view and revealed once the user scrolls past it, same as before.
+     #chatbase-message-bubbles is Chatbase's unprompted "Hi! What can I help
+     you with?" greeting panel, which pops up on its own with a solid dark
+     background — on a real phone that renders as a stray dark rectangle
+     sitting right in the same bottom strip as Safari's floating toolbar, so
+     it's now force-hidden at all times on mobile. This does NOT touch
+     #chatbase-bubble-window (the actual opened conversation), so tapping the
+     launcher still opens the chat normally. Chatbase mounts these elements
+     directly on <body> asynchronously (confirmed by inspecting the live
+     DOM), so a MutationObserver re-applies the current state the moment they
+     actually appear, and an IntersectionObserver on the image strip drives
+     the launcher's hidden/shown state off scroll position. -->
+<script>
+(function(){
+  if (!window.matchMedia('(max-width:768px)').matches) return;
+  var strip = document.getElementById('hsmFilmstripWrap');
+  if (!strip) return;
+
+  var hidden = true;
+
+  function apply(){
+    var btn = document.getElementById('chatbase-bubble-button');
+    if (btn) btn.style.setProperty('display', hidden ? 'none' : '', 'important');
+    // Greeting bubble: always suppressed on mobile, independent of scroll.
+    var bubbles = document.getElementById('chatbase-message-bubbles');
+    if (bubbles) bubbles.style.setProperty('display', 'none', 'important');
+  }
+  apply();
+
+  var mo = new MutationObserver(apply);
+  mo.observe(document.body, { childList: true, subtree: true });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        hidden = true; // strip still on screen -> stay hidden
+      } else if (entry.boundingClientRect.top < 0){
+        hidden = false; // scrolled past it -> reveal
+      } else {
+        hidden = true; // not reached yet -> stay hidden
+      }
+      apply();
+    });
+  }, { threshold: 0 });
+  io.observe(strip);
+})();
+</script>
+
+<script>
+(function(){
+  var input = document.getElementById('chatInput');
+  var sendBtn = document.getElementById('chatSend');
+  var askNishLink = document.getElementById('askNishLink');
+  var askCursor = document.getElementById('askCursor');
+
+  if (input && askCursor){
+    var syncCursor = function(){
+      var show = input.value.length === 0 && document.activeElement !== input;
+      askCursor.style.display = show ? 'block' : 'none';
+    };
+    input.addEventListener('focus', syncCursor);
+    input.addEventListener('blur', syncCursor);
+    input.addEventListener('input', syncCursor);
+    syncCursor();
+  }
+
+  function openWithMessage(q){
+    if (!q) return;
+    if (window.chatbase && typeof window.chatbase.open === 'function'){
+      window.chatbase.open({ message: q });
+    }
+  }
+
+  function trackNishAi(source){
+    if (typeof gtag === 'function') {
+      gtag('event', 'ask_nish_ai', { source: source });
+    }
+  }
+
+  sendBtn.addEventListener('click', function(){
+    var q = input.value.trim();
+    if (!q) return;
+    trackNishAi('typed_question');
+    openWithMessage(q);
+    input.value = '';
+  });
+
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' && !e.shiftKey){ e.preventDefault(); sendBtn.click(); }
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chip'), function(chip){
+    chip.addEventListener('click', function(){
+      trackNishAi('suggested_chip');
+      openWithMessage(chip.getAttribute('data-q'));
+    });
+  });
+
+  if (askNishLink){
+    askNishLink.addEventListener('click', function(e){
+      e.preventDefault();
+      if (typeof gtag === 'function') {
+        gtag('event', 'cta_click', { cta_label: 'ask_nish_link' });
+      }
+      document.getElementById('ask').scrollIntoView({behavior:'smooth'});
+      setTimeout(function(){ input.focus(); }, 500);
+    });
+  }
+
+  // HSM REEL FILMSTRIP
+  (function(){
+    // ---- EDIT HERE to add, remove or reorder reel thumbnails ----
+    // Each entry needs a src (path to the image) and alt text. Each screenshot
+    // already has its own view count baked into the image pixels, so there is
+    // no HTML overlay — the raw image is shown as-is, unfiltered.
+    var reelImages = [
+      { src: "reel-01.jpg", alt: "High Status Method reel: lighting up beside a lit pool at night", views: "1.4M" },
+      { src: "reel-02.jpg", alt: "High Status Method reel: portrait shot inside a car", views: "1.6M" },
+      { src: "reel-03.jpg", alt: "High Status Method reel: city skyline view from a high-rise at night", views: "596K" },
+      { src: "reel-04.jpg", alt: "High Status Method reel: setting up a camera rig", views: "1.2M" },
+      { src: "reel-05.jpg", alt: "High Status Method reel: filming from a helicopter over the ocean", views: "634K" },
+      { src: "reel-06.jpg", alt: "High Status Method reel: working on a laptop with a city skyline at dusk", views: "890K" },
+      { src: "reel-07.jpg", alt: "High Status Method reel: modern house exterior at dusk", views: "484K" },
+      { src: "reel-08.jpg", alt: "High Status Method reel: car reveal through a smoke-filled archway", views: "633K" }
+    ];
+    // ---------------------------------------------------------------
+
+    var trackOne = document.getElementById('hsmTrackOne');
+    var trackTwo = document.getElementById('hsmTrackTwo');
+    if (!trackOne || !trackTwo) return;
+
+    function buildCard(item, eager){
+      var card = document.createElement('div');
+      card.className = 'hsm-filmstrip-card';
+
+      var img = document.createElement('img');
+      img.src = item.src;
+      img.alt = item.alt || '';
+      img.loading = eager ? 'eager' : 'lazy';
+      img.decoding = 'async';
+      img.width = 210;
+      img.height = 373;
+      img.onerror = function(){
+        // Neutral dark placeholder naming the missing file, never a broken-image icon.
+        card.classList.add('hsm-filmstrip-missing');
+        card.setAttribute('data-missing-file', item.src);
+        img.remove();
+      };
+      card.appendChild(img);
+
+      return card;
+    }
+
+    // Duplicate each sequence exactly once (built once, at init) so the loop
+    // is mathematically seamless: the track is always exactly two full
+    // copies wide, so wrapping the offset at half that width lands on a
+    // pixel-identical frame and the loop restarts invisibly.
+    function fillTrack(track, sequence){
+      var doubled = sequence.concat(sequence);
+      var frag = document.createDocumentFragment();
+      doubled.forEach(function(item, i){
+        frag.appendChild(buildCard(item, i < 6));
+      });
+      track.appendChild(frag);
+    }
+
+    fillTrack(trackOne, reelImages);
+    // Row two is hidden outright on phones (single-row layout there), so skip
+    // building it entirely rather than just hiding it with CSS — no point
+    // making a phone fetch a second row's worth of images it will never show.
+    if (!window.matchMedia('(max-width:768px)').matches){
+      fillTrack(trackTwo, reelImages.slice().reverse()); // different order from row one
+    }
+
+    // Both rows are moved purely by the CSS animation above (constant speed,
+    // running from page load, unaffected by scroll). Nothing here needs to
+    // drive position. We just pause both while the tab is hidden to save
+    // CPU/GPU, and resume when it's visible again.
+    document.addEventListener('visibilitychange', function(){
+      var state = document.hidden ? 'paused' : 'running';
+      document.querySelectorAll('.hsm-filmstrip-track').forEach(function(t){
+        t.style.animationPlayState = state;
+      });
+    });
+
+    // Touch pause/resume + tap-vs-swipe, mobile only. When the OS has
+    // prefers-reduced-motion on, the CSS block for that already turns the
+    // row into a plain overflow-x:auto native-scroll strip with the
+    // animation fully disabled — this JS is only for the normal, animated
+    // mobile case, so it deliberately does nothing when reduced motion is
+    // active (native scrolling already covers "manually swipeable" there).
+    var wrap = document.getElementById('hsmFilmstripWrap');
+    if (wrap && window.matchMedia('(max-width:768px)').matches &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+
+      var tracks = [trackOne, trackTwo].filter(Boolean);
+      var touching = false, startX = 0, startTime = 0, resumeTimer = null;
+      var wasSwipe = false;
+      var TAP_THRESHOLD_PX = 10; // below this, treat the touch as a tap, not a swipe
+      var RESUME_DELAY_MS = 500; // "resume shortly after touch interaction ends"
+
+      function currentTranslateX(track){
+        var t = window.getComputedStyle(track).transform;
+        if (!t || t === 'none') return 0;
+        var m3d = t.match(/^matrix3d\(([^)]+)\)/);
+        if (m3d){ var p = m3d[1].split(',').map(Number); return p[12] || 0; }
+        var m2d = t.match(/^matrix\(([^)]+)\)/);
+        if (m2d){ var q = m2d[1].split(',').map(Number); return q[4] || 0; }
+        return 0;
+      }
+
+      wrap.addEventListener('touchstart', function(e){
+        if (!e.touches || !e.touches.length) return;
+        touching = true;
+        wasSwipe = false;
+        clearTimeout(resumeTimer);
+        startX = e.touches[0].clientX;
+        startTime = Date.now();
+        tracks.forEach(function(t){
+          var tx = currentTranslateX(t);
+          t.style.animationPlayState = 'paused';
+          t.dataset.hsmDragBase = tx;
+          t.style.transform = 'translate3d(' + tx + 'px,0,0)';
+        });
+      }, { passive:true });
+
+      wrap.addEventListener('touchmove', function(e){
+        if (!touching || !e.touches || !e.touches.length) return;
+        var dx = e.touches[0].clientX - startX;
+        if (Math.abs(dx) > TAP_THRESHOLD_PX) wasSwipe = true;
+        tracks.forEach(function(t){
+          var base = parseFloat(t.dataset.hsmDragBase || '0');
+          var half = t.scrollWidth / 2; // one full (non-duplicated) sequence width
+          if (half <= 0) return;
+          var next = base + dx;
+          // Wrap into a single-sequence range so a long drag still feels
+          // like the same continuous, seamless loop as the automatic motion.
+          next = -(((-next % half) + half) % half);
+          t.style.transform = 'translate3d(' + next + 'px,0,0)';
+        });
+      }, { passive:true });
+
+      function endTouch(){
+        if (!touching) return;
+        touching = false;
+        resumeTimer = setTimeout(function(){
+          tracks.forEach(function(t){
+            t.style.transform = '';
+            t.style.animationPlayState = 'running';
+          });
+        }, RESUME_DELAY_MS);
+      }
+
+      wrap.addEventListener('touchend', endTouch, { passive:true });
+      wrap.addEventListener('touchcancel', endTouch, { passive:true });
+
+      // If a card is ever wrapped in a real <a> (once real Reel URLs are
+      // supplied), this stops a drag from being misread as a tap-through:
+      // a swipe suppresses the following click, a genuine tap lets it fire.
+      wrap.addEventListener('click', function(e){
+        if (wasSwipe){ e.preventDefault(); e.stopPropagation(); wasSwipe = false; }
+      }, true);
+    }
+  })();
+
+  // Mobile hamburger menu: reveals the same four desktop <nav> links
+  // (Method / AI Coach / Pricing / FAQ), which otherwise have no way to
+  // be reached below the desktop nav's own 860px breakpoint. Desktop
+  // (>=768px) is completely unaffected: .hsm-nav-toggle/.hsm-mobile-nav
+  // are display:none outside the mobile media query.
+  (function(){
+    var toggle = document.getElementById('hsmNavToggle');
+    var panel = document.getElementById('hsmMobileNav');
+    if (!toggle || !panel) return;
+
+    function closeMenu(){
+      panel.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    function toggleMenu(){
+      var open = panel.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      toggleMenu();
+    });
+    panel.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', closeMenu);
+    });
+    document.addEventListener('click', function(e){
+      if (!panel.classList.contains('is-open')) return;
+      if (!panel.contains(e.target) && e.target !== toggle) closeMenu();
+    });
+    window.addEventListener('resize', function(){
+      if (!window.matchMedia('(max-width:768px)').matches) closeMenu();
+    });
+  })();
+
+  // Mobile-only metrics entrance, mockup-approved: "Views Generated" and
+  // "Followers Built" count up from zero; "Years Experience" and "Founders
+  // Worked With" aren't real counts, so they just fade/rise in instead.
+  // Plays once, immediately on load. Desktop's .hero-stats block is a
+  // completely separate element and is untouched by any of this.
+  (function(){
+    var wrap = document.getElementById('hsmMetricsMobile');
+    if (!wrap || !window.matchMedia('(max-width:768px)').matches) return;
+
+    var metrics = wrap.querySelectorAll('.metric');
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function formatValue(raw, fmt){
+      if (fmt === 'M') return Math.round(raw / 1000000) + 'M+';
+      if (fmt === 'K') return Math.round(raw / 1000) + 'K+';
+      return Math.round(raw) + '';
+    }
+    function easeOutExpo(t){ return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+
+    if (reduceMotion){
+      metrics.forEach(function(el){ el.classList.add('hsm-metric-in'); });
+      return;
+    }
+
+    metrics.forEach(function(el, i){
+      var delay = i * 180;
+      if (el.hasAttribute('data-target')){
+        var target = parseFloat(el.getAttribute('data-target'));
+        var fmt = el.getAttribute('data-format');
+        var vEl = el.querySelector('.v');
+        var duration = 1700;
+        vEl.textContent = formatValue(0, fmt);
+        setTimeout(function(){
+          el.classList.add('hsm-metric-in');
+          var start = null;
+          function tick(now){
+            if (start === null) start = now;
+            var elapsed = now - start;
+            var t = Math.min(elapsed / duration, 1);
+            var eased = easeOutExpo(t);
+            var raw = eased * target;
+            vEl.textContent = t < 1 ? formatValue(raw, fmt) : formatValue(target, fmt);
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }, delay);
+      } else {
+        setTimeout(function(){ el.classList.add('hsm-metric-in'); }, delay);
+      }
+    });
+  })();
+
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-row.open').forEach(function(i){
+        i.classList.remove('open');
+        var btn = i.querySelector('.faq-q');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if(!wasOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // INSIDE THE MEMBERSHIP: pillar accordion
+  document.querySelectorAll('.pillar-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.pillar-row.open').forEach(function(i){ i.classList.remove('open'); });
+      if(!wasOpen){ item.classList.add('open'); }
+    });
+  });
+
+  // PRICING: 1:1 coaching / membership toggle
+  (function(){
+    var toggle = document.getElementById('priceToggle');
+    if(!toggle) return;
+    var btnCoaching = document.getElementById('toggleCoaching');
+    var btnMembership = document.getElementById('toggleMembership');
+    var amtCoaching = document.getElementById('amtCoaching');
+    var amtMembership = document.getElementById('amtMembership');
+    var listCoaching = document.getElementById('listCoaching');
+    var listMembership = document.getElementById('listMembership');
+    var label = document.getElementById('priceListLabel');
+    var sub = document.getElementById('priceSub');
+    var cta = document.getElementById('priceCta');
+    var fine = document.getElementById('priceFine');
+    function showCoaching(){
+      toggle.classList.add('is-coaching'); toggle.classList.remove('is-membership');
+      btnCoaching.classList.add('active'); btnMembership.classList.remove('active');
+      amtCoaching.classList.add('active'); amtMembership.classList.remove('active');
+      listCoaching.classList.add('active'); listMembership.classList.remove('active');
+      label.style.opacity = '1'; label.style.height = 'auto'; label.style.marginBottom = '10px';
+      sub.textContent = 'Six-week program';
+      cta.textContent = 'Apply for 1:1 coaching';
+      cta.setAttribute('href', '/apply.html');
+      fine.textContent = 'Application required · Limited availability';
+    }
+    function showMembership(){
+      toggle.classList.add('is-membership'); toggle.classList.remove('is-coaching');
+      btnMembership.classList.add('active'); btnCoaching.classList.remove('active');
+      amtMembership.classList.add('active'); amtCoaching.classList.remove('active');
+      listMembership.classList.add('active'); listCoaching.classList.remove('active');
+      label.style.opacity = '0'; label.style.height = '0'; label.style.marginBottom = '0';
+      sub.textContent = '$3.30/day';
+      cta.textContent = 'Get full access';
+      cta.setAttribute('href', 'https://whop.com/joined/high-status-method/products/membership-ba-4150/');
+      fine.textContent = 'Instant access · Cancel anytime';
+    }
+    btnCoaching.addEventListener('click', showCoaching);
+    btnMembership.addEventListener('click', showMembership);
+  })();
+
+  // PRICING (MOBILE): membership / 1:1 coaching toggle — separate from the
+  // desktop toggle above so desktop is never touched. Membership is first
+  // and active by default per spec. Card height stays fixed because every
+  // swapped field (price, sub line, relationship label, list, CTA, fine
+  // print) has its own reserved space — nothing animates from 0 to auto.
+  (function(){
+    var toggle = document.getElementById('mPriceToggle');
+    if(!toggle) return;
+    var COACHING_APPLICATION_URL = '/apply.html';
+    var btnMembership = document.getElementById('mToggleMembership');
+    var btnCoaching = document.getElementById('mToggleCoaching');
+    var amtMembership = document.getElementById('mAmtMembership');
+    var amtCoaching = document.getElementById('mAmtCoaching');
+    var listMembership = document.getElementById('mListMembership');
+    var listCoaching = document.getElementById('mListCoaching');
+    var label = document.getElementById('mPriceListLabel');
+    var sub = document.getElementById('mPriceSub');
+    var cta = document.getElementById('mPriceCta');
+    var fine = document.getElementById('mPriceFine');
+    function showMembership(){
+      toggle.classList.remove('is-coaching');
+      btnMembership.classList.add('active'); btnCoaching.classList.remove('active');
+      btnMembership.setAttribute('aria-pressed','true'); btnCoaching.setAttribute('aria-pressed','false');
+      amtMembership.classList.add('active'); amtCoaching.classList.remove('active');
+      listMembership.classList.add('active'); listCoaching.classList.remove('active');
+      label.style.opacity = '0'; label.setAttribute('aria-hidden','true');
+      sub.textContent = '$3.30/day';
+      cta.textContent = 'Get full access';
+      cta.setAttribute('href', 'https://whop.com/joined/high-status-method/products/membership-ba-4150/');
+      fine.textContent = 'Instant access · Cancel anytime';
+    }
+    function showCoaching(){
+      toggle.classList.add('is-coaching');
+      btnCoaching.classList.add('active'); btnMembership.classList.remove('active');
+      btnCoaching.setAttribute('aria-pressed','true'); btnMembership.setAttribute('aria-pressed','false');
+      amtCoaching.classList.add('active'); amtMembership.classList.remove('active');
+      listCoaching.classList.add('active'); listMembership.classList.remove('active');
+      label.style.opacity = '1'; label.removeAttribute('aria-hidden');
+      sub.textContent = 'Six-week private coaching program';
+      cta.textContent = 'Apply for 1:1 coaching';
+      cta.setAttribute('href', COACHING_APPLICATION_URL || '#');
+      fine.textContent = 'Application required · Limited private clients';
+    }
+    btnMembership.addEventListener('click', showMembership);
+    btnCoaching.addEventListener('click', showCoaching);
+    btnMembership.addEventListener('keydown', function(e){ if(e.key === 'ArrowRight'){ btnCoaching.focus(); showCoaching(); } });
+    btnCoaching.addEventListener('keydown', function(e){ if(e.key === 'ArrowLeft'){ btnMembership.focus(); showMembership(); } });
+  })();
+})();
+</script>
+<!-- CHECKOUT MODAL: on-site Whop embedded checkout. Opens for any element
+     with .js-open-checkout (nav Join, hero CTA, membership CTA, final CTA,
+     "Join for unlimited"), and for the pricing card's own CTA buttons
+     (#priceCta / #mPriceCta) but ONLY when they're currently showing the
+     Membership state — those two buttons are shared with the 1:1 coaching
+     toggle, so the href is checked live at click time rather than assumed. -->
+<script>
+(function(){
+  var WHOP_PLAN_ID = 'plan_gs6r5jgaA4A7d';
+  var overlay = document.getElementById('checkoutOverlay');
+  var modal = document.getElementById('checkoutModal');
+  var body = document.getElementById('checkoutModalBody');
+  var closeBtn = document.getElementById('checkoutModalCloseBtn');
+  if (!overlay || !modal || !body) return;
+  var mounted = false;
+  var lastFocused = null;
+  var lockedScrollY = 0;
+
+  // Builds the shimmering placeholder shown while the real Whop form loads
+  // — shaped roughly like the eventual form (a summary/price block, an
+  // email field, a card field, an expiry+CVC row, a pay button) rather than
+  // a bare "Loading…" line. Pure markup/CSS, no dependency on Whop's own
+  // load timing.
+  function buildSkeleton(){
+    var wrap = document.createElement('div');
+    wrap.className = 'checkout-skeleton';
+    wrap.setAttribute('aria-hidden', 'true');
+    wrap.innerHTML =
+      '<div class="checkout-skeleton-stat"><span class="cs-v">0</span> Views Generated</div>' +
+      '<div class="sk-label"></div>' +
+      '<div class="sk-price"></div>' +
+      '<div class="sk-label"></div>' +
+      '<div class="sk-field"></div>' +
+      '<div class="sk-label"></div>' +
+      '<div class="sk-field"></div>' +
+      '<div class="sk-split"><div class="sk-field"></div><div class="sk-field"></div></div>' +
+      '<div class="sk-button"></div>';
+    wrap._statCtl = animateSkeletonStat(wrap.querySelector('.cs-v'));
+    return wrap;
+  }
+
+  // Counts the "Views Generated" caption up from 0, starting the moment the
+  // skeleton appears. A fixed-duration count-up finishes on its own clock,
+  // not the real load's — on a slower connection it was hitting "50M+" and
+  // then just sitting there, frozen, while the actual form was still
+  // loading behind it, which defeated the point of giving people something
+  // to watch through the WHOLE wait. This instead climbs on an
+  // asymptotic curve that keeps approaching 50M but mathematically never
+  // quite reaches it on its own — it's still visibly ticking upward
+  // whether the real load takes 1 second or 8 — and only snaps to the
+  // final "50M+" when told to via the returned controller's finish(),
+  // which mountCheckout() calls at the exact moment it's actually removing
+  // the skeleton (real content ready, or a fallback timeout). Respects
+  // prefers-reduced-motion by just showing the final value immediately.
+  function animateSkeletonStat(vEl){
+    if (!vEl) return { finish:function(){} };
+    var target = 50000000;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      vEl.textContent = '50M+';
+      return { finish:function(){} };
+    }
+    var tau = 2500; // time constant: ~63% by 2.5s, ~86% by 5s, ~95% by 8s
+    var start = null;
+    var stopped = false;
+    function tick(now){
+      if (stopped) return;
+      if (start === null) start = now;
+      var t = now - start;
+      var raw = target * (1 - Math.exp(-t / tau));
+      vEl.textContent = Math.round(raw / 1000000) + 'M+';
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+    return {
+      finish: function(){
+        if (stopped) return;
+        stopped = true;
+        vEl.textContent = '50M+';
+      }
+    };
+  }
+
+  // Mounts the real Whop embed. Idempotent (mounted flag) so it's safe to
+  // call this early — from the background-prefetch triggers below — as well
+  // as from the actual Join click; whichever happens first wins, the second
+  // call is just a no-op. The skeleton is inserted immediately alongside the
+  // (still-empty) Whop target div and removed automatically the instant
+  // Whop's script actually injects real content into it (detected via
+  // MutationObserver rather than any Whop-specific "loaded" callback, so it
+  // works the same regardless of whether this ran on click or minutes
+  // earlier during a background prefetch).
+  function mountCheckout(){
+    if (mounted) return;
+    mounted = true;
+    var div = document.createElement('div');
+    div.id = 'whop-embedded-checkout';
+    div.setAttribute('data-whop-checkout-plan-id', WHOP_PLAN_ID);
+    div.setAttribute('data-whop-checkout-theme', 'dark');
+    div.setAttribute('data-whop-checkout-theme-accent-color', '#0a63ff');
+    div.setAttribute('data-whop-checkout-theme-background-color', '#131313');
+    div.setAttribute('data-whop-checkout-theme-border-radius', '14');
+    div.setAttribute('data-whop-checkout-return-url', 'https://highstatusmethod.com/?checkout=complete');
+    div.setAttribute('data-whop-checkout-skip-redirect', 'true');
+    div.setAttribute('data-whop-checkout-on-complete', 'hsmOnCheckoutComplete');
+    div.setAttribute('data-whop-checkout-style-container-padding-x', '18');
+    div.setAttribute('data-whop-checkout-style-container-padding-y', '18');
+
+    var skeleton = buildSkeleton();
+    body.innerHTML = '';
+    body.appendChild(skeleton);
+    body.appendChild(div);
+
+    // Waiting for the iframe ELEMENT to appear isn't enough — it exists in
+    // the DOM well before its own document (Whop's actual checkout page)
+    // has loaded, which left a blank gap between our skeleton disappearing
+    // and Whop's UI actually painting. Instead: watch for the iframe to
+    // appear, then wait for THAT iframe's own load event (fires even though
+    // it's cross-origin) before swapping away from the skeleton.
+    //
+    // Two independent safety nets so the skeleton can never get stuck on
+    // screen indefinitely no matter what goes wrong: a 6s fallback once the
+    // iframe exists but never fires load, AND a top-level 10s fallback
+    // covering the (rarer) case where Whop's own embed script itself is
+    // slow to even create the iframe in the first place — e.g. if the tab
+    // was backgrounded when Join was tapped, browsers throttle background
+    // scripts, which can delay third-party embeds like this one.
+    var removed = false;
+    var remove = function(){
+      if (removed) return;
+      removed = true;
+      if (skeleton._statCtl) skeleton._statCtl.finish();
+      skeleton.remove();
+    };
+    setTimeout(remove, 10000);
+    var mo = new MutationObserver(function(){
+      var frame = div.querySelector('iframe');
+      if (frame){
+        mo.disconnect();
+        frame.addEventListener('load', remove);
+        setTimeout(remove, 6000);
+      }
+    });
+    mo.observe(div, { childList:true });
+  }
+
+  // ---- Background prefetch: mobile has no hover, so a tap and a click are
+  // effectively the same instant — there's no pre-click signal to lean on
+  // the way desktop hover works. Instead, start loading the real checkout
+  // in the background (hidden — the modal itself stays closed) on whichever
+  // of these happens first:
+  //   - the visitor scrolls at all (~40px) — the strongest intent signal;
+  //     someone engaging with the page is far more likely to click Join
+  //     than someone who hasn't moved yet
+  //   - the visitor's first touch/tap anywhere on the page — fires on
+  //     touchstart, which lands a beat before the eventual click, so if
+  //     their first tap ever IS the Join button, mounting is already
+  //     underway by the time the click event itself fires
+  //   - hovering an actual Join button (desktop only, free extra head start)
+  //   - a 5s fallback timer, so someone who just reads the hero without
+  //     scrolling or tapping still gets it prefetched well before most
+  //     people finish deciding
+  // Whichever fires first wins; the rest are cleaned up immediately so this
+  // never runs twice and never lingers as dead listeners.
+  var prefetchArmed = false;
+  function armPrefetch(){
+    if (prefetchArmed) return;
+    prefetchArmed = true;
+    var timer = setTimeout(trigger, 5000);
+    function trigger(){
+      clearTimeout(timer);
+      window.removeEventListener('scroll', onScroll);
+      document.removeEventListener('touchstart', trigger);
+      document.removeEventListener('pointerdown', trigger);
+      mountCheckout();
+    }
+    function onScroll(){
+      if ((window.scrollY || window.pageYOffset || 0) > 40) trigger();
+    }
+    window.addEventListener('scroll', onScroll, { passive:true });
+    document.addEventListener('touchstart', trigger, { passive:true, once:true });
+    document.addEventListener('pointerdown', trigger, { once:true });
+    document.querySelectorAll('.js-open-checkout').forEach(function(el){
+      el.addEventListener('mouseenter', trigger, { once:true });
+    });
+  }
+  armPrefetch();
+
+  // Called by the Whop embed itself once a real purchase completes.
+  // Community entry point members land on once they're in.
+  var COMMUNITY_URL = 'https://whop.com/joined/high-status-method/';
+
+  window.hsmOnCheckoutComplete = function(planId, receiptId){
+    // GA4 conversion — 'purchase' is auto-marked as a conversion event by GA4.
+    // This is a client-side signal only; the Whop webhook (server-side) is the
+    // reliable source of truth and will be wired in separately.
+    if (typeof gtag === 'function') {
+      gtag('event', 'purchase', {
+        transaction_id: receiptId || ('unknown_' + Date.now()),
+        value: 99,
+        currency: 'USD',
+        items: [{ item_id: planId || 'unknown_plan', item_name: 'High Status Method Membership' }]
+      });
+    }
+    // Hide (don't remove) the checkout iframe rather than clearing body,
+    // so nothing about the payment/session state underneath is disturbed.
+    var checkoutEl = document.getElementById('whop-embedded-checkout');
+    if (checkoutEl) checkoutEl.style.display = 'none';
+
+    // Exact approved copy — do not edit wording without checking the brief.
+    var successEl = document.createElement('div');
+    successEl.className = 'checkout-modal-success';
+    successEl.innerHTML =
+      '<div class="ok">' +
+        '<svg viewBox="0 0 52 52" aria-hidden="true">' +
+          '<circle class="ok-check-circle" cx="26" cy="26" r="24"/>' +
+          '<path class="ok-check-mark" d="M14 27l7 7 17-17"/>' +
+        '</svg>' +
+      '</div>' +
+      '<h4>You’re in.</h4>' +
+      '<p>Your High Status Method membership is ready. I’ve sent your receipt and access details to the email used at checkout.</p>' +
+      '<div class="success-cta-wrap">' +
+        '<a class="btn btn-primary t-button checkout-success-cta" href="' + COMMUNITY_URL + '" target="_blank" rel="noopener">Open High Status Method</a>' +
+        '<span class="email-note">Use the same email you entered at checkout.</span>' +
+      '</div>';
+    body.appendChild(successEl);
+  };
+
+  function openModal(){
+    lastFocused = document.activeElement;
+    mountCheckout();
+    // Lock the background page with position:fixed (not just overflow:hidden)
+    // — iOS Safari lets touch-scroll bleed through overflow:hidden on body,
+    // which was scrolling the whole page underneath the modal and pushing
+    // the sticky close button out of view. Restoring scroll position on
+    // close (below) undoes this cleanly.
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.position = 'fixed';
+    document.body.style.top = (-lockedScrollY) + 'px';
+    document.body.style.left = '0';
+    document.body.style.right = '0';
+    document.body.classList.add('checkout-modal-open');
+    overlay.classList.add('is-open');
+    modal.classList.add('is-open');
+    if (closeBtn) closeBtn.focus();
+  }
+  function closeModal(){
+    document.body.classList.remove('checkout-modal-open');
+    overlay.classList.remove('is-open');
+    modal.classList.remove('is-open');
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    window.scrollTo(0, lockedScrollY);
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  }
+
+  // GA4 event helper — fails silently if gtag hasn't loaded (blocked, offline, etc).
+  function trackCta(label){
+    if (typeof gtag === 'function') {
+      gtag('event', 'cta_click', { cta_label: label });
+    }
+  }
+
+  document.querySelectorAll('.js-open-checkout').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      trackCta(el.getAttribute('data-cta') || 'unlabeled');
+      openModal();
+    });
+  });
+
+  // Pricing card CTAs double as the 1:1 coaching button depending on the
+  // toggle state — only intercept when the href is actually the Whop join
+  // link (i.e. the card is showing Membership) so coaching mode is untouched.
+  ['priceCta', 'mPriceCta'].forEach(function(id){
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    btn.addEventListener('click', function(e){
+      var href = btn.getAttribute('href') || '';
+      if (href.indexOf('whop.com/joined') !== -1) {
+        e.preventDefault();
+        trackCta(btn.getAttribute('data-cta') || id);
+        openModal();
+      }
+    });
+  });
+
+  overlay.addEventListener('click', closeModal);
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+  });
+
+  // If Whop's return-url redirect ever does fire (e.g. certain external
+  // payment providers reload the top frame despite skip-redirect), show the
+  // same success state on load instead of leaving a bare ?checkout=complete
+  // query string with no feedback.
+  if (/[?&]checkout=complete/.test(window.location.search)) {
+    document.addEventListener('DOMContentLoaded', function(){
+      openModal();
+      window.hsmOnCheckoutComplete();
+    });
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[edge_functions]]
+  path = "/dashboard.html"
+  function = "dashboard-gate"
+
+[[edge_functions]]
+  path = "/.netlify/functions/dashboard-data"
+  function = "dashboard-gate"

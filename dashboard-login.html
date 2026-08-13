@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width">
+<title>Dashboard Login — High Status Method</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#ffffff; --ink-muted:#9a9a9a; --ink-faint:#666666;
+  --canvas:#050505; --canvas-deep:#000000;
+  --hairline-soft:#191919;
+  --accent-blue-soft:#4d8bff;
+  --r-pill:100px;
+  --font-body:'Inter', -apple-system, system-ui, sans-serif;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html{background:#000;}
+body{
+  margin:0; min-height:100vh; background:#000; color:var(--ink);
+  font-family:var(--font-body); font-size:15px; letter-spacing:-0.15px;
+  -webkit-font-smoothing:antialiased;
+  display:flex; align-items:center; justify-content:center; padding:24px;
+}
+.card{
+  width:100%; max-width:360px; background:#0d0d0d; border:1px solid var(--hairline-soft);
+  border-radius:16px; padding:32px 28px;
+}
+.brand{ display:flex; align-items:center; gap:9px; margin-bottom:24px; }
+.brand .mark{ width:24px; height:24px; }
+.brand .mark img{ width:100%; height:100%; object-fit:contain; }
+.brand .word{ font-size:14px; font-weight:600; }
+h1{ font-size:22px; font-weight:600; letter-spacing:-0.5px; margin-bottom:6px; }
+p.sub{ color:var(--ink-muted); font-size:13.5px; margin-bottom:24px; line-height:1.5; }
+label{ display:block; font-size:12.5px; color:var(--ink-faint); margin-bottom:6px; }
+input[type="password"]{
+  width:100%; background:#000; border:1px solid var(--hairline-soft); border-radius:10px;
+  padding:12px 14px; color:var(--ink); font-size:15px; font-family:inherit; margin-bottom:14px;
+}
+input[type="password"]:focus{ outline:none; border-color:var(--accent-blue-soft); }
+button{
+  width:100%; background:#fff; color:#000; border:none; border-radius:var(--r-pill);
+  padding:13px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit;
+}
+button:hover{ background:#e6e6e6; }
+button:disabled{ opacity:0.6; cursor:default; }
+.error{ color:#ff6b6b; font-size:13px; margin-bottom:14px; display:none; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="brand"><span class="mark"><img src="hsm-logo-new.png" alt="High Status Method"></span><span class="word">High Status Method</span></div>
+  <h1>Dashboard access</h1>
+  <p class="sub">Enter the password to view the analytics dashboard.</p>
+  <div class="error" id="err">Incorrect password. Try again.</div>
+  <form id="loginForm">
+    <label for="pw">Password</label>
+    <input type="password" id="pw" name="pw" autocomplete="current-password" autofocus required>
+    <button type="submit" id="submitBtn">Unlock dashboard</button>
+  </form>
+</div>
+
+<script>
+const form = document.getElementById('loginForm');
+const err = document.getElementById('err');
+const btn = document.getElementById('submitBtn');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  err.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Checking...';
+  try {
+    const res = await fetch('/.netlify/functions/dashboard-login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: document.getElementById('pw').value }),
+    });
+    if (res.ok) {
+      const params = new URLSearchParams(window.location.search);
+      window.location.href = params.get('next') || '/dashboard.html';
+      return;
+    }
+    err.style.display = 'block';
+  } catch (e) {
+    err.textContent = 'Something went wrong. Try again.';
+    err.style.display = 'block';
+  }
+  btn.disabled = false;
+  btn.textContent = 'Unlock dashboard';
+});
+</script>
+
+</body>
+</html>
