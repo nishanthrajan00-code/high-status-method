@@ -630,7 +630,9 @@
   .pillar-q{ display:flex; align-items:flex-start; gap:var(--sp-md); cursor:pointer; }
   .pillar-num{ font-family:var(--font-display); font-size:14px; font-weight:600; color:var(--ink); width:28px; flex-shrink:0; padding-top:4px; }
   .pillar-head{ flex:1; }
-  .pillar-head .badge-row{ display:flex; align-items:center; gap:10px; margin-bottom:6px; flex-wrap:wrap; }
+  .pillar-head .badge-row{ display:flex; align-items:flex-start; gap:10px; margin-bottom:6px; flex-wrap:nowrap; }
+  .pillar-head .badge-row h3{ flex:1 1 auto; min-width:0; }
+  .pillar-head .badge-row .real-badge{ flex-shrink:0; white-space:nowrap; margin-top:4px; }
   .pillar-head h3{ font-family:var(--font-display); font-size:21px; font-weight:600; letter-spacing:-0.4px; }
   .pillar-head .hook{ color:var(--ink-muted); font-size:15px; margin-top:4px; }
   .pillar-icon{ font-size:22px; color:var(--ink); flex-shrink:0; transition:transform .2s; line-height:1; padding-top:2px; }
